@@ -1,0 +1,161 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Fundamentals of Electromagnetics
+% Professor: E. Marengo Fuentes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Fundamentals of Electromagnetics}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: E. Marengo Fuentes}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}
+
+  \item There are two kinds of fields, electric ($E$) and magnetic ($H$)
+
+  \item There are two kinds of fluxes, electric ($D$) and magnetic ($B$)
+
+    $$\boxed{D=\varepsilon E}$$
+    $$\boxed{B=\mu H}$$
+
+    \begin{itemize}
+
+      \item Where $\varepsilon$ is the permittivity and $\mu$ is the permeability
+
+    \end{itemize}
+
+  \item The electromagnetic force:
+
+    $$F=\underbrace{qE}_\text{Electric}+\underbrace{qv\times B}_\text{Magnetic }$$
+
+    \begin{itemize}
+
+      \item The magnetic component is referred to as Lorentz's Force
+
+    \end{itemize}
+
+  \item Connection to gravitation
+
+    \begin{itemize}
+
+      \item The electric force from particle 1 to 2 may be written as:
+
+        $$F=\frac{q_1q_2}{4\pi\varepsilon R^2}\hat{r}_{12}$$
+
+      \item From particle 2 to 1, it may be written as
+
+        $$F=\frac{q_1q_2}{4\pi\varepsilon R^2}\hat{r}_{21}=\frac{q_1q_2}{4\pi\varepsilon R^2}(-\hat{r}_{12})$$
+
+      \item This is known as the Coulomb force
+
+      \item Combining this with force equation above, we see:
+
+        $$E_{q_1}=\frac{q_1}{4\pi\varepsilon R^2}\hat{r}_{12}$$
+
+      \item Gravitation between two masses can be written as:
+
+        $$F_{1\to2}=\frac{m_1m_2}{R^2}G\hat{r}_{12}$$
+
+    \end{itemize}
+
+  \item Signals and Systems
+
+    \begin{itemize}
+
+      \item Systems take in some input (such as a signal), $x$, use a rule $\mathcal{L}$, and map it to an output, $y$
+
+      \item Linear Systems — Obey the principle of superposition; that is, the output of a sum of inputs = the sum of outputs of the individual inputs
+
+          $$\mathcal{L}\Sigma=\Sigma\mathcal{L}$$
+
+          \begin{itemize}
+
+            \item Linear systems can be split up into two further groups: time-variant and time-invariant (LTI)
+
+          \end{itemize}
+
+    \end{itemize}
+
+  \item Fourier/Frequency Domain Representation
+
+    \begin{itemize}
+
+      \item F.T.\ of $x(t)=\tilde{x}(\omega)$
+
+      \item F.T.\ of $y(t)=\tilde{y}(\omega)$
+
+      \item This makes:
+
+        $$\tilde{y}(\omega)=H(\omega)\tilde{x}(\omega)$$
+
+        where $H(\omega)$ is the transfer function
+
+      \item We can recall from circuits:
+
+        $$y(t)=V_0\cos(\omega t+\phi)$$
+
+      \item With Euler representation, we get:
+
+        $$e^{j\theta)=\cos(\theta)+j\sin(\theta)$$
+        $$\tilde{Y}(\omega)=\text{ phasor }=V_0e^{j\theta}$$
+
+      \item By definition, the Fourier transform is:
+
+        $$f(t)=\frac{1}{2\pi}\int_{-\infty}^{\infty}\tilde{F}(\omega)e^{j\omega t}\,d\omega\text{, if signal $f(t)\in$ real:}$$
+        $$=Re\int_0^{\infty}\,d\omega\,e^{j\omega t}\tilde{A}(\omega)$$
+        $$=\int_0^{\infty}\,d\omega\,Re\left( e^{j\omega t} \tilde{A}(\omega)\right)$$
+
+      \item This is called the analytic signal representation
+
+    \end{itemize}
+
+  \item Waves
+
+    \begin{itemize}
+
+      \item A wave can be thought of as a propagating disturbance in a medium
+
+      \item There is finite propagation time
+
+      \item The most general way to describe a propagating, unidimensional wave traveling in the positive $x$ direction can be written as follows:
+
+        $$f(x,t)=F\left(t-\frac{x}{c}\right)$$
+
+        \begin{itemize}
+
+          \item Special case: cosine
+
+            $$F(t)=A\cos(\omega t+\phi)$$
+            $$f(x,t)=A\cos\left(\omega t + \phi - \frac{x}{c}\right)\footnote{This wave is in the $+x$ direction}$$
+
+        \end{itemize}
+
+      \item The most general wave traveling in the $-x$ direction:
+
+        $$f(x,t)=F\left( t+\frac{x}{c} \right)$$
+
+      \item We know $\omega=2\pi f$
+
+      \item This yields us $\dfrac{\omega}{c}=k$, or the wave number (of a wave)
+
+      \item Thus,
+
+        $$\omega t-\frac{x}{c}=\omega \left( t-k\frac{x}{\omega} \right)=\omega t-kx$$
+
+      \item Finally, we obtain:
+
+        $$f(x,t)=A\cos(\omega t+\phi - kx)$$
+
+        This is called the canonical form of a wave traveling in the positive $x$ direction.
+
+    \end{itemize}
+
+\end{itemize}
+
+\end{document}
+
