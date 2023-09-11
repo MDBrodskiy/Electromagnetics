@@ -1,0 +1,70 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Fundamentals of Electromagnetics
+% Professor: E. Marengo Fuentes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Transmission Lines}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: E. Marengo Fuentes}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}
+
+  \item Transmission lines connect inputs to loads
+
+    \begin{itemize}
+
+      \item $l$ is the length of the transmission lines
+
+      \item If $l$ is not much smaller than $\lambda$, we need detailed analysis
+
+      \item If $l$ is comparable to $\lambda$, then we can not use the lumped parameter model
+
+      \item We can, however, partition the transmission lines into segments where $l<<\lambda$, then we can apply Kirchoff's circuit laws to each subdivided segment
+
+      \item For an imperfect dielectric, there is some loss
+
+      \item Some per unit-length properties:
+
+        \begin{enumerate}
+
+          \item Resistance per unit length: $R'$ (ohm per meter)
+
+            $$\boxed{R=R'\Delta z}$$
+
+          \item Inductance per unit length: $L'$ (Henry per meter)
+
+            $$\boxed{L=L'\Delta z}$$
+
+          \item Capacitance per unit length: $C'$ (Farad per meter)
+
+            $$\boxed{C=C'\Delta z}$$
+
+          \item Conductance per unit length: $G'$ (Siemens per meter)
+
+            $$\boxed{G=G'\Delta z}$$
+
+        \end{enumerate}
+
+    \end{itemize}
+
+  \item Using this, we obtain the Helmholtz Equation:
+
+    $$\boxed{\frac{d^2 \tilde{V}(z)}{dz^2}-\gamma^2\tilde{V}(z)=0}$$
+
+    \begin{itemize}
+
+      \item Where $\gamma=\sqrt{(j\omega C' + G')(j\omega L' + R')}$
+
+    \end{itemize}
+
+\end{itemize}
+
+\end{document}
+
