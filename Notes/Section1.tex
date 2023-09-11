@@ -155,6 +155,66 @@
 
     \end{itemize}
 
+  \item Traveling Waves
+
+    \begin{itemize}
+
+      \item Wave maintains shape, no distortion
+
+      \item Medium is nondispersive (properties do not depend on frequency)
+
+      \item For a sinusoidal, $T$ is the period; for a delayed sinusoid, $T\cong$ pulse length
+
+      \item Given a pulse defined by $f(t-d/c)$:
+
+      \item If $d/c<<T$, the delayed version $\approx$ original
+
+        \begin{itemize}
+
+          \item Limited delay, same signal at input and at output, we can ignore the finite propagation speed of wave, circuit theory applies
+
+        \end{itemize}
+
+      \item If $d/c$ is NOT $<<T$
+
+        \begin{itemize}
+
+          \item We need electromagnetics, circuit theory does NOT apply
+
+        \end{itemize}
+
+      \item If $d<<\lambda$ (where $\lambda$ is wavelength), circuit theory applies
+
+      \item $f(t-x/c)=y(t)\rightarrow f(t)=A\cos(\omega t+\phi)\rightarrow y(t)=A\cos(\omega t+\phi-kx)$
+
+        \begin{itemize}
+
+          \item $k=\frac{2\pi}{\lambda}$ is the wave number
+
+          \item $\lambda=\frac{c}{f}$
+
+          \item Propagates in $+x$
+
+          \item $A$ is the amplitude, $\phi$ is the phase, $\omega$ is the frequency, $f$ is the frequency in hertz, $2\pi f$ is the frequenzy in rad/s, and $\lambda$ is the wavelength
+
+        \end{itemize}
+
+      \item An exponential term adds attenuation: $f(t-x/c)=f(t)e^{-\alpha x}$
+
+        \begin{itemize}
+            
+          \item $\alpha$ is the attentuation factor
+
+          \item $y(x,t)=Ae^{-\alpha x}\cos(\omega t -kx+\phi$ for the $+x$ direction
+
+          \item $y(x,t)=Ae^{\alpha x}\cos(\omega t +kx+\phi$ for the $-x$ direction
+
+          \item Phasor: $\tilde{y}(x)=\underbrace{\left(Ae^{-\alpha x}\right)}_{\text{attenuation}}\,\underbrace{\left(e^{-jkx}\right)}_{\text{phase form}}\left(e^{j\phi}\right)$
+
+        \end{itemize}
+
+    \end{itemize}
+
 \end{itemize}
 
 \end{document}
