@@ -21,6 +21,7 @@
 
 * [**Notes**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Notes/)
   * [**Section 1**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Notes/Section1.pdf)
+  * [**Section 2**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Notes/Section2.pdf)
 * [**Homework**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Homework/)
 * [**Exams**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Exams/)
 
