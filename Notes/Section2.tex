@@ -64,6 +64,103 @@
 
     \end{itemize}
 
+  \item For a Unidimensional Wave Equation:
+
+    \begin{itemize}
+
+      \item The characteristic equation becomes: $m^2-\gamma^2=0\rightarrow m=\pm\gamma$
+
+      \item The solutions to the above differential equation are superpositions of $\{e^{\gamma z},e^{-\gamma z}\}$
+
+      \item $\gamma=\sqrt{(R'+j\omega L')(G'+j\omega C')}$, where:
+
+        \begin{itemize}
+
+          \item $R'$ is the resistance per unit length
+
+          \item $L'$ is the impedance per unit length
+
+          \item $j=\sqrt{-1}$
+
+          \item $\gamma=R_e\gamma + I_m\gamma$
+
+          \item $R_e\gamma=\alpha$, the attenuation constant
+
+          \item $I_m\gamma=\beta$, the phase constant (sometimes, notation used is $k=\beta$, like the wave number)
+
+        \end{itemize}
+
+      $$\widetilde{V}(z)=V_o^+e^{-\gamma z}+V_o^-e^{\gamma z}$$
+
+    \item We know from the definitions above that $\gamma=\alpha + j\beta$
+
+    \item For $\alpha>0$, we are dealing with a (passive) lossy material ($\alpha=0$) is a loss less material
+
+    \item For $\alpha<0$, we are dealing with a gainy material
+
+    \item The wave coming from the source is known as the ``incident'' wave, and the wave combing from the load is known as ``reflected''
+
+      $$-\frac{dV}{dz}=(R'+j\omega L')\widetilde{I}(z)$$
+
+    \item Solving this by incorporation the equation for $\widetilde{V}$ above, we obtain:
+
+      $$\widetilde{I}=\left( V_o^+e^{-\gamma z}-V_o^-e^{\gamma z} \right)\left( \frac{\gamma}{R'+j\omega L'} \right)$$
+
+    \item We then define $z_o=\displaystyle \frac{R'+j\omega L}{\gamma}$ as our characteristic impedance:
+
+      $$\widetilde{I}=\frac{1}{z_o}\left( V_o^+e^{-\gamma z}-V_o^-e^{\gamma z} \right)$$
+
+    \item There are thus two unknowns: $V_o^+$, which depends on source, and $V_o^-$, which is the reflected wave amplitude (depends on load)
+
+      \begin{itemize}
+
+        \item The incident wave (in phase domain): $\widetilde{V}=V_o^+e^{-\alpha z}e^{-j\beta z}$
+
+        \item In time domain, this becomes: $v(z,t)=|V_o^+|e^{-\alpha z}\cos(\omega t-\beta z+\phi_+)$\footnote{$\beta$ represents the wave number}
+
+      \end{itemize}
+
+    \item For a lossless line ($R'=0,G'=0$, and a pure inductor and capacitor)
+
+      $$\gamma=\sqrt{(jC'\omega)(jL'\omega)}\rightarrow\beta=\omega\sqrt{L'C'}=\frac{\omega}{U_{ph}}$$
+      $$U_{ph}=\frac{1}{\sqrt{L'C'}}=\frac{1}{\sqrt{\mu\varepsilon}}=c\text{ in dielectric}$$
+
+    \item The reflection coefficient ($\Gamma$) is given by:
+
+      $$\Gamma=\frac{V_o^-}{V_o^+}$$
+      $$V_{load}=V_o^+(1+\Gamma)$$
+      $$I_{load}=\frac{V_o^+}{z_o}(1-\Gamma)$$
+
+    \item The normalized load impedance: $\hat{z_L}=\frac{z_L}{z_o}$
+
+      $$\Gamma=\frac{z_l-z_o}{z_l+z_o}\rightarrow\Gamma = \frac{\hat{z_L}-1}{\hat{z_L}+1}$$
+
+    \item Special Cases:
+
+      \begin{itemize}
+
+        \item Short Circuit:
+
+          $$\Gamma_{sc}=-1$$
+
+        \item Open Circuit:
+
+          $$\Gamma_{oc}=1$$
+
+          \begin{itemize}
+
+            \item Reactive load, no real absorption
+
+          \end{itemize}
+
+      \end{itemize}
+
+    \item A Phase-Shifted $\Gamma$ would look as follows:
+
+      $$\Gamma_l=\left(\frac{z_L-z_o}{z_L+z_o}\right)e^{-j(2\beta l)}$$
+
+    \end{itemize}
+
 \end{itemize}
 
 \end{document}
