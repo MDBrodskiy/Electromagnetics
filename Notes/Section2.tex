@@ -161,6 +161,44 @@
 
     \end{itemize}
 
+  \item Standing Waves
+
+    \begin{itemize}
+
+      \item $\tilde{V}(d)=V_o^+e^{-j\beta d}+V_o^+\Gamma e^{j\beta d}$
+
+        $$|\tilde{V}(d)|=|V_o^+\left[ 1+|\Gamma|^2 + 2|\Gamma|\cos(2\beta d-\theta_r) \right]^{\frac{1}{2}}$$
+
+        \begin{itemize}
+
+          \item This fluctuates between a minimum ($V_{min}$) and maximum ($V_{max}$) value
+
+          \item Maximum/minimum possible value is determined by the $\cos$ term and is $\pm2|\Gamma$ 
+
+        \end{itemize}
+
+      \item From the formula for $\Gamma$, we see that $\Gamma=0$ when the load impedance matches the internal impedance
+
+        \begin{itemize}
+
+          \item This is known as load matching
+
+        \end{itemize}
+
+      \item Thus, when $\Gamma=0$, we know $|\tilde{V}(d)|=|V_0^+|$
+
+      \item The standing wave ratio is defined as follows:
+
+        $$SWR=\frac{1+|\Gamma|}{1-|\Gamma|}$$
+
+      \item This measures the matching level of load to the line; ideally, $\Gamma=0$, and $SWR=1$; worst case, $|\Gamma|=1$, and $SWR=\infty$
+
+      \item In reference to the maximums and minimums, these occur when $2\beta d-\theta_r=2n\pi$ and $2\beta d-\theta_r=(2n+1)\pi$, respectively. This results in:
+
+        $$\left\{\begin{array}{l} d_{max}=\displaystyle\frac{2n\pi+\theta_r}{2\beta}\\\\d_{min}=\displaystyle\frac{(2n+1)\pi+\theta_r}{\2\beta}\end{array}$$
+
+    \end{itemize}
+
 \end{itemize}
 
 \end{document}
