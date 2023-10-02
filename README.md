@@ -22,6 +22,7 @@
 * [**Notes**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Notes/)
   * [**Introduction**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Notes/Section1.pdf)
   * [**Transmission Lines**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Notes/Section2.pdf)
+  * [**Electrostatics, Boundary Conditions, Potentials, and More**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Notes/Section3.pdf)
 * [**Labs**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Labs/)
     * [**Lab One**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Labs/Lab1.pdf)
 * [**Exams**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Exams/)
