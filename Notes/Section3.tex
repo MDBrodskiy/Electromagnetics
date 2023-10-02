@@ -1,0 +1,106 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Fundamentals of Electromagnetics
+% Professor: E. Marengo Fuentes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Electrostatics, Boundary Conditions, Potentials, \& More}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: E. Marengo Fuentes}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}
+
+  \item We begin with Maxwell's Equations:
+
+    $$\nabla\cdot D=P\quad\text{Gauss's Law}$$
+
+    \begin{itemize}
+
+      \item Where $D$ is the electric flux density
+
+    $$\nabla\times E=-\frac{\partial}{\partial t}B\quad\text{Faraday's Law}$$
+
+    $$\nabla\cdot B=0\quad\text{Magnetic Gauss's Law}$$
+
+    $$\nabla\times H=J+\frac{\partial}{\partial t}D\quad\text{Amp\'ere's Law}$$
+
+      \item $\rho$ is the charge density in coulombs per cubic meter, $J$ is the current density, in amp\'eres per square meter
+
+    \end{itemize}
+
+  \item In electrostatics, these laws mean:
+
+    $$\frac{\partial}{\partial t}=0$$
+    $$\nabla\cdot D=\rho$$
+    $$\nabla\times E=0$$
+
+  \item In magnetostatics, these laws mean:
+
+    $$\frac{\partial}{\partial t}=0$$
+    $$\nabla\cdot B=0$$
+    $$\nabla\times H=J$$
+
+  \item The emphasis in electrodynamics is:
+
+    $$\frac{\partial}{\partial t}\neq0$$
+
+  \item Combining equations, we get:
+
+    $$J=\rho v$$
+
+    where $v$ is the velocity of the charge in meters per second
+
+  \item Work
+
+    \begin{itemize}
+
+      \item Moving a particle from point 1 to 2 would take work:
+
+        $$W=\int_1^2 -Eq\,dl$$
+
+      \item It can be expressed as a difference in potential energies:
+
+        $$V_2-V_1=\int_1^2 -Eq\,dl$$
+
+      \item Moving a charge from infinity:
+
+        $$V_2-V_{\infty}=\int_\infty^2 -Eq\,dl$$
+        $$V=-\int E\,dl\longleftrightarrow E=-\nabla V$$
+
+      \item The Laplacian operator can be expressed as:
+
+        $$\nabla^2=\nabla\cdot\nabla$$
+        $$\nabla^2(V)=-\frac{\rho}{\varepsilon}$$
+
+    \end{itemize}
+
+  \item Source Point Analysis
+
+    \begin{itemize}
+
+      \item The voltage with respect to a source point ($r'$) and an observation point ($r$) can be expressed as:
+
+        $$V(r)=\int\frac{\rho(r')\,dr'}{4\pi\varepsilon|r-r'|}$$
+
+      \item We can also learn:
+
+        $$\nabla^2G(r,r')=\delta(r-r')$$
+
+        where
+
+        $$G(r,r')=-\frac{1}{4\pi\varepsilon|r-r'|}$$
+
+      \item This is known as the Green's function or impulse response
+
+    \end{itemize}
+
+\end{itemize}
+
+\end{document}
+
