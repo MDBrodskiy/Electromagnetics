@@ -227,4 +227,39 @@ Using the values we obtained for the longer wire, we get:
 
 \section{Conclusion}
 
+\subsection{Questions}
+
+\begin{enumerate}
+
+  \item How does the Smith chart frequency dependence of the matched load compare with the frequency dependence of any other component load that you tried? Can you get 50$[\si{\ohm}]$ load at any frequency? Can you get a 50$[\si{\ohm}]$ load at more than one frequency at the same time?
+
+    Unlike all of the other tested components, the matched load is independent of the frequency; that is, no matter what the value of the frequency was, the load was displayed at the same point on the Smith chart. This indicates that it is possible to obtain a $50[\si{\ohm}]$ (matched) load at any frequency (or, at least, in the wide range we tested). Furthermore, as indicated by the matched load, it is possible to have a load at more than one frequency at the same time.
+
+  \item Is the impedance of the components what you expect at low frequencies (0.3 MHz)? What happens when the frequency increases toward 3 GHz?
+
+    With the exception of the inductor (most likely due to poor coiling), all of the devices behaved as expected at low frequencies. The resistors both stayed at roughly the same impedance value to begin with, but then, due to the lossy line, the impedance was slightly shifted. The capacitor, beginning as an open circuit as expected, began to increase in lossiness, and act more like a short circuit. It was expected that the inductor would begin as a short circuit and then, at high frequency, spiral inwards; however, the inductor never began as a short circuit. Overall, however, it is apt to say that, generally, at low frequencies, the components acted as expected, but increased in lossiness as we approached 3 GHz.
+
+  \item Explain in your own words how the network analyzer can display the impedance of the device under test (DUT) by measuring the amplitude and phase of the reflection from the DUT of a known transmitted signal.
+
+    A vector network analyzer utilizes the input signal and reflected signal to determine impedance characteristics. It measures the amplitude and phase of the original signal and then compares it to the reflected wave. In doing so, the vector network analyzer is able to display the information in its impedance form.
+
+  \item Explain how you can analyze your data to find the ``electrical length'' of the cable? How can you compare the electrical length with the physical length of the cable to get a value for the effective dielectric constant of the cable? Assuming that all the materials are non-magnetic, the effective dielectric constant in a coaxial cable is just the $\varepsilon$ of the insulating material. Compare the value you get for $\varepsilon_r$ to  handbook  values  for  insulating  materials  such  as  Teflon.  Does  your  measurement make sense? If the insulating material were slightly lossy, what difference would that make? How might you estimate the imaginary part of $\varepsilon_r$ from your measurements?
+
+    We determined the ``electrical length'' of the cable by essentially measuring the amount of wavelengths present in the transmission line at a given frequency, in tandem with the phase angle. We then applied this to the formula:
+
+    $$e^{-j\theta}=e^{-2j\beta\Delta z}$$
+
+    After doing this, we used a different wire, which essentially extended the transmission line to determine the dielectric constant. The physical length of the wire was measured and compared to its electrical length in the following formula:
+
+    $$\varepsilon_r=\left( \frac{\lambda_o\theta_m}{4\pi\Delta z} \right)^2$$
+
+    The formula leverages a ratio of the ``electrical length'' to the physical length to obtain a dielectric constant. Our obtained value was 2.34, which is comparable to that of teflon: 2.1. Our result varied by approximately $11.34\%$, which makes sense. A lossy material would mean a less accurate measurement of the dielectric value. The imaginary part of $\varepsilon_r$ can be estimated by way of the loss factor of the material.
+
+\end{enumerate}
+
+\subsection{Summary}
+
+Overall, we learned about the use and operation of vector network analyzers, as well as how to calculate the electrical length of the cable, and then the dielectric constant from the electrical and physical length. By obtaining a phase angle of $70^{\circ}$, we initially determined that the length of the internal transmission line was approximately $1[\si{\centi\meter}]$. Then, we used this value, in tandem with an external wire, to determine the dielectric constant, or electrical permittivity, of the coaxial insulator.
+    Using a formula we derived for the dielectric constant, we obtained a value of 2.34. As instructed, we compared this value to teflon, which has a dielectric constant of 2.1. Since the two values are quite comparable, we were able to confirm our measurements as fairly accurate. This allowed us to verify what we learned about Smith charts, VNA operation, and various transmission line formulas.
+
 \end{document}
