@@ -1,0 +1,98 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Fundamentals of Electromagnetics
+% Professor: E. Marengo Fuentes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Magnetostatics}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: E. Marengo Fuentes}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}
+
+  \item From the prior lecture, we know:
+
+    $$\left\{\begin{array}{l}\nabla\cdot D=\rho\\\nabla\times E=-\frac{\partial}{\partial t}B\end{array}$$
+
+  \item From statics, we know:
+
+    $$\left\{\begin{array}{l}\frac{\partial}{\partial t}=0\\\nabla\times E=0\end{array}$$
+
+  \item We also know Poisson's equation:
+
+    $$\nabla^2V=-\frac{\rho}{\varepsilon}$$
+
+  \item In this chapter, we learn:
+
+    $$\nabla\cdot B=0$$
+    $$\nabla\times H=J+\frac{\partial}{\partial t}D$$
+
+    \begin{itemize}
+
+      \item Where $\sigma$ is conductivity, we find:
+
+        $$J=\sigma E$$
+
+      \item We can see the $B$ is divergence-less
+
+      \item Furthermore, since we know:
+
+        $$\nabla\times (\text{curl})=0$$
+
+        we can say:
+
+        $$B=\nabla A$$
+
+        since $B=\mu H$:
+
+        $$\mu H=\nabla\times A$$
+
+        this means:
+
+        $$\nabla\times\nabla\times A=\mu J$$
+
+        and finally, since we know $\nabla\times\nabla\times=-\nabla^2+\nabla(\nabla\cdot)$
+
+        $$-\nabla^2A+\nabla(\nabla A)=\mu J$$
+
+        since $A$ is auxiliary, we can say $\nabla\cdot A=0$:
+
+        $$\nabla^2 A=\mu J$$
+
+        Since we know the solution to Poisson's equation, we can apply it here as well, which gives us:
+
+        $$A(r)=\frac{\mu}{4\pi}\int_{\forall}\frac{J(r')}{|r-r'|}\,dr'$$
+
+    \end{itemize}
+
+  \item From Faraday's Law, we can rewrite:
+
+    $$\nabla\times E=-\frac{\partial}{\partial t}\mu H$$
+
+  \item From equations of linear systems, we can obtain:
+
+    $$\nabla\times\tilde{E}(r)=-j\omega\mu\tilde{H}(r)$$
+    $$\nabla\times\tilde{H}(r)=j\omega\varepsilon\tilde{E}(r)$$
+
+    \begin{itemize}
+
+      \item The magnetic field phasor would then be:
+
+        $$\tilde{H}(r)=\frac{\nabla\times\tilde{E}}{-j\omega\mu}$$
+
+      \item The electric field phasor would then be:
+
+        $$\nabla\times\tilde{H}=j\omega\varepsilon\tilde{E}$$
+
+    \end{itemize}
+
+\end{itemize}
+
+\end{document}
+
