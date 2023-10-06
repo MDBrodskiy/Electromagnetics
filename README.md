@@ -28,6 +28,7 @@
   * [**Lab One**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Labs/Lab1.pdf)
   * [**Lab Two Pre-lab**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Labs/PreLabExp2.pdf)
 * [**Exams**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Exams/)
+    * [**Exam 1**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Exams/Exam1.pdf)
 
 <!--
   * [**Chapter 1**](#Notes/Chapter\ 1)
