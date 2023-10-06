@@ -85,7 +85,7 @@
 
           Alternatively, the phasor may be written as:
 
-          $$\boxed{\mathbb{V}_g=10\angle-30^{\circ}}$$
+          $$\boxed{\mathbb{V}_g=10\angle-30^{\circ}\text{ or }10\angle-\frac{\pi}{6}}$$
 
       \item 
 
@@ -130,7 +130,7 @@
 
         Putting these together, we get:
 
-        $$\boxed{V_{in}(t)=5.5434\cos(\omega t+3.6976)}$$
+        $$\boxed{V_{in}(t)=5.5434\cos(\omega t+3.6976^{\circ})\text{ or }5.5434\cos(\omega t+.064535)}$$
 
       \item 
 
@@ -149,15 +149,16 @@
 
         $$\mathbb{V}=7.8422e^{j(\beta z+48.707)}+5.5452e^{j(3.7078-\beta z)}$$
 
-        We can then convert $\theta$ to radians for homogenous units:
+        We can then convert $\theta$ to radians for homogenous units (and shift by $\pi$ to make sure the values are negative when converted):
 
-        $$\boxed{\mathbb{V}=\underbrace{7.8422e^{j(10\pi z+.8501)}}_{\text{incident wave}}+\underbrace{5.5452e^{j(0.064714-10\pi z)}}_{\text{reflected wave}}}$$
+        $$\mathbb{V}=\underbrace{7.8422e^{j(10\pi z+(.8501-\pi))}}_{\text{incident wave}}+\underbrace{5.5452e^{j((0.064714-\pi)-10\pi z)}}_{\text{reflected wave}}$$
+      $$\boxed{\mathbb{V}=\underbrace{7.8422e^{j(10\pi z-2.2915))}}_{\text{incident wave}}+\underbrace{5.5452e^{-j(3.0769+10\pi z)}}_{\text{reflected wave}}}$$
 
       \item 
 
         We can easily convert the phasor above to the time domain:
 
-        $$\boxed{V(z,t)=\underbrace{7.8422\cos(\omega t+10\pi z+.8501)}_{\text{incident wave}}+\underbrace{9.1569\cos(\omega t-10\pi z+.064714)}_{\text{reflected wave}}}$$
+        $$\boxed{V(z,t)=\underbrace{7.8422\cos(\omega t+10\pi z-2.2915)}_{\text{incident wave}}+\underbrace{9.1569\cos(\omega t-10\pi z-3.0769)}_{\text{reflected wave}}}$$
 
       \item 
 
