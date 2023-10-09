@@ -26,7 +26,8 @@
   * [**Magnetostatics**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Notes/Section4.pdf)
 * [**Labs**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Labs/)
   * [**Lab One**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Labs/Lab1.pdf)
-  * [**Lab Two Pre-lab**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Labs/PreLabExp2.pdf)
+  * [**Lab Two**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Labs/Lab2.pdf)
+    * [**Lab Two Pre-lab**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Labs/PreLabExp2.pdf)
 * [**Exams**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Exams/)
     * [**Exam 1**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Exams/Exam1.pdf)
 
