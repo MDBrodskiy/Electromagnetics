@@ -1,0 +1,122 @@
+\documentclass[
+	letterpaper, % Paper size, specify a4paper (A4) or letterpaper (US letter)
+	10pt, % Default font size, specify 10pt, 11pt or 12pt
+]{CSUniSchoolLabReport}
+
+%----------------------------------------------------------------------------------------
+%	REPORT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{Experiment Two\\ Fundamentals of Electromagnetics Lab \\ EECE2530/1} % Report title
+
+\author{Michael \textsc{Brodskiy}\\ \small \href{mailto:Brodskiy.M@Northeastern.edu}{Brodskiy.M@Northeastern.edu}}
+
+\date{October 11, 2023} % Date of the report
+
+%----------------------------------------------------------------------------------------
+
+
+\begin{document}
+
+\maketitle % Insert the title, author and date using the information specified above
+
+\begin{center}
+	\begin{tabular}{l r}
+		Date Performed: & October 4, 2023 \\ % Date the experiment was performed
+        Partners: & Manas \textsc{Mahajan} \& Priyam \textsc{Modi} \\ % Partner names
+		Instructor: & Professor \textsc{Marengo-Fuentes} \\ % Instructor/supervisor
+        TAs: & Nicolas \textsc{Casilli} \& Farah \textsc{Ben Ayed} \\ % Teachers Assistants 
+	\end{tabular}
+\end{center}
+
+\newpage
+
+\begin{abstract}
+
+  The goal
+
+\end{abstract}
+
+\begin{flushleft}
+
+  \textsc{Keywords:} 
+
+\end{flushleft}
+
+\newpage
+
+\section{Equipment}
+
+\hspace{.5 in} Available equipment included:\\
+
+\begin{itemize}
+
+  \item 
+
+\end{itemize}
+
+\section{Introduction \& Objectives}
+
+\newpage
+
+\section{Results \& Analysis} 
+
+We begin with the values we measured using the single-slot analyzer (length values in centimeters):
+
+\begin{center}
+\begin{tabular}[h!]{|c|c|c|c|c|c|c|c|c|}
+  \hline
+  $f\,[\si{\giga\hertz}]$ & $l_1$ & $l_2$ & $\lambda_{theor}$ & $\lambda_{exp}$ & $S_{short}$ & $l_{short}$ & $S_{open}$ & $l_{open}$\\
+  \hline
+  2.3 & 10.5 & 17.25 & 13.034 & 13.2 & 1.22 & 13.2 & 1.205 & 10.55\\
+  \hline
+  2.7 & 10.7 & 16.7 & 11.103 & 11.8 & 1.12 & 11.8 & 1.205 & 14.3\\
+  \hline
+\end{tabular}
+\end{center}
+
+Next, we calculate the magnitude of the reflection constant and phase angle for the two frequencies:
+
+$$|\Gamma_{short,2.3}|=\frac{1.22-1}{1.22+1}=.099099$$
+$$\theta_{short,2.3}=\pi+\frac{4\pi}{.132}\left[ .132-.105 \right]=5.712$$
+$$|\Gamma_{open,2.3}|=\frac{1.205-1}{1.205+1}=.092971$$
+$$\theta_{open,2.3}=\pi+\frac{4\pi}{.132}\left[ .1055-.105 \right]=3.1892$$
+
+We now repeat for the 2.7 $[\si{\giga\hertz}]$ values:
+
+$$|\Gamma_{short,2.7}|=\frac{1.12-1}{1.12+1}=.056604$$
+$$\theta_{short,2.7}=\pi+\frac{4\pi}{.118}\left[ .118-.107\right]=4.313$$
+$$|\Gamma_{open,2.7}|=\frac{1.205-1}{1.205+1}=.092971$$
+$$\theta_{open,2.7}=\pi+\frac{4\pi}{.118}\left[ .143-.107 \right]=6.9754$$
+
+Next, we find the full expression for $\Gamma$:
+
+$$\Gamma_{short,2.3}=.099099e^{5.712j}=.083367-.053577j$$
+$$\Gamma_{open,2.3}=.092971e^{3.1892j}=-.092865-.0044237j$$
+$$\Gamma_{short,2.7}=.056604e^{4.313j}=-.022009-.05215j$$
+$$\Gamma_{open,2.7}=.092971e^{6.9754j}=.071572+.059338j$$
+
+Next, we use these values to find the impedances of such loads:
+
+$$z_{short,2.3}=50\left( \frac{1+.083367-.053577j}{.9166+.053577j} \right)=55.8316-2.7611j[\si{\ohm}]$$
+$$z_{open,2.3}=50\left(\frac{1-.092865-.0044237j}{1+.092865+.0044237j}\right)=41.5011-0.3704j[\si{\ohm}]$$
+$$z_{short,2.7}=50\left( \frac{1-.022009-.05215j}{1+.022009+.05215j} \right)=47.5924-4.9798j[\si{\ohm}]$$
+$$z_{open,2.7}=50\left( \frac{1+.071572+.059338j}{1-.071572-.059338j} \right)=57.2708+6.8559j[\si{\ohm}]$$
+
+We know combine the complementary impedance values to find $z_{om}$:
+
+$$z_{om,2.3}=\sqrt{(55.8316-2.7611j)(41.5011-.03704j)}=48.1502-1.2114j[\si{\ohm}]$$
+$$z_{om,2.7}=\sqrt{(47.5924-4.9798j)(57.2708+6.8559j)}=52.5352+0.3911j[\si{\ohm}]$$
+
+We now use these values in the following formula, with $\mu=1$, $\eta_o=120\pi$, and coaxial radius values of outer length $7[\si{\milli\meter}]$ and inner length $3[\si{\milli\meter}]$:
+
+$$\varepsilon_r=\mu_r\left(  \frac{\eta_o\ln\left( \frac{b}{a} \right)}{2\pi z_{om}}\right)^2$$
+
+$$\varepsilon_{r,2.3}=\left( \frac{120\pi\ln\left(\frac{7}{3}\right)}{2\pi(48.1502-1.2114j)} \right)^2=1.112638+.056021j$$
+$$\varepsilon_{r,2.7}=\left( \frac{120\pi\ln\left(\frac{7}{3}\right)}{2\pi(52.5352+.3911j)} \right)^2=.936271-.013940j$$
+
+Both of the real part values are near 1, as expected for air.
+
+\section{Conclusion}
+
+\end{document}
