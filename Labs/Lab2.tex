@@ -33,13 +33,13 @@
 
 \begin{abstract}
 
-  The goal
+  The goal of this laboratory experiment is to determine the dielectric constant of a coaxial cable by measuring the voltage standing wave ratio, as well as the lengths of lines at which the standing wave ratio minimums occur. To do this, the use of a signal generator connected to a slotted line, which, in turn, is connected to a standing wave ratio meter is employed.
 
 \end{abstract}
 
 \begin{flushleft}
 
-  \textsc{Keywords:} 
+  \textsc{Keywords:} \underline{dielectric constant}, \underline{coaxial}, \underline{voltage standing wave ratio}, \underline{signal generator}, \underline{slotted line}, \underline{standing wave ratio meter}
 
 \end{flushleft}
 
@@ -51,17 +51,34 @@
 
 \begin{itemize}
 
-  \item 
+  \item Microwave Signal Generator
+
+  \item Slotted Line (HP 809C)
+
+  \item Voltage Standing Wave Ratio Meter (HP415E)
+
+  \item Coaxial Cables
 
 \end{itemize}
 
 \section{Introduction \& Objectives}
 
-\newpage
+First and foremost, we began by applying the correct settings to the signal generator — most importantly, a frequency of $2.3[\si{\giga\hertz}]$. Next, we calibrated the slotted line and voltage standing wave ratio (VSWR) meter without any components connected to the coaxial cable. \\
+
+With all of our components ready and assembled, we measure $l_1$ and $l_2$, or the first two minima of the VSWR starting from the right. Then, we added a short cap with an RCL2 onto the slotted transmission line, after which we found the voltage minimum between $l_1$ and $l_2$, recording the readings as $S_{short}$ and $l_{short}$. Next, the cap was removed, yielding an open circuit, and the same steps were repeated to obtain $l_{open}$ and $S_{short}$.\\
+
+With all of the necessary measurements, we then determine the value of the dielectric constant, $\varepsilon_r$, using the following flowchart shown in Figure \ref{fig:1}. These steps were then repeated for a wave of frequency $2.7[\si{\giga\hertz}]$.
+
+\begin{figure}[H]
+  \centering
+  \include{Figures/Lab Two/ExpFlow.tex}
+  \caption{Flowchart for Calculations}
+  \label{fig:1}
+\end{figure}
 
 \section{Results \& Analysis} 
 
-We begin with the values we measured using the single-slot analyzer (length values in centimeters):
+We begin with the values we measured using the slotted line (length values in centimeters):
 
 \begin{center}
 \begin{tabular}[h!]{|c|c|c|c|c|c|c|c|c|}
@@ -118,5 +135,29 @@ $$\varepsilon_{r,2.7}=\left( \frac{120\pi\ln\left(\frac{7}{3}\right)}{2\pi(52.53
 Both of the real part values are near 1, as expected for air.
 
 \section{Conclusion}
+
+\subsection{Questions}
+
+\begin{enumerate}
+
+  \item Compare values of $\varepsilon_r$ for the two frequencies and explain any differences. Should the values be the same? If not, what does it mean?
+
+    We can see that the magnitudes of the two values differ by about 17.32\%. This is most likely because slight imprecisions in measurements have a significant effect on the result. Thus, we most likely measured the values involved with $2.3[\si{\giga\hertz}]$ to be slightly larger than their actual values, while the values associated with $2.7[\si{\giga\hertz}]$ were probably measured as smaller than their true values.\\
+
+    We know the values should be the same, as the same coaxial cable would have the same dielectric constant, no matter the frequency (which explains why it is called the dielectric \underline{constant}). Given the age of the equipment used, it isn't too surprising that the values weren't measured as accurately as they could have been. 
+
+  \item Which constraints should you take into account when choosing a transmission line?
+
+    The most important constraints to consider are the dielectric constant and the magnetic permeability. Given that these properties can change the way electricity, and, thus, light travels within the transmission line, it is important to consider the effects of these before choosing transmission lines. Furthermore, the conductance, resistance, inductance, and capacitance of a line should always be considered. Since these factors depend on the length, the length should also be taken into account.
+
+  \item Briefly explain 2 applications on which transmission lines are used
+
+    One application in which transmission lines are used is cable television. Another application is the use of telegraph lines (thus the name telegrapher's equations). The transmission lines work by passing high-frequency signals. These signals can not be used with regular power lines since the energy loss becomes too great. Thus, regular cables lose power, and become lossy.
+
+\end{enumerate}
+
+\subsection{Summary}
+
+Overall, given our measurements and calculations, we can see that the dielectric constant is just above 1 (approximately 1.03). This makes sense, as air would not make the ability of a charge to align with the polarity of a field more or less likely.
 
 \end{document}
