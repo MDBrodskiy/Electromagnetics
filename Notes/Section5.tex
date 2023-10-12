@@ -1,0 +1,121 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Fundamentals of Electromagnetics
+% Professor: E. Marengo Fuentes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Plane-Wave Propagation}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: E. Marengo Fuentes}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}
+
+  \item We will have problems about fields from sources radiating
+
+    \begin{itemize}
+
+      \item In a source-free region, there are no electric and magnetic fields. That would make Maxwell's equations:
+
+        $$\nabla\cdot\tilde{E}=0$$
+        $$\nabla\times\tilde{E}=-j\omega\mu\tilde{H}$$
+        $$\nabla\cdot\tilde{H}=0$$
+        $$\nabla\times\tilde{H}=\tilde{J}+j\omega\varepsilon\tilde{E}$$
+
+      \item In a region with a source, Maxwell's equations may be written as:
+
+        $$\nabla\cdot\tilde{E}=\frac{\rho_V}{\varepsilon}$$
+        $$\nabla\times\tilde{E}=-j\omega\mu\tilde{H}$$
+        $$\nabla\cdot\tilde{H}=0$$
+        $$\nabla\times\tilde{H}=\tilde{J}_{cond}+j\omega\varepsilon\tilde{E}$$
+
+      \item There are two components that contribute to current density:
+
+        $$\tilde{J}=\tilde{J}_{impressed}+\tilde{J}_{cond}$$
+
+        \begin{itemize}
+
+          \item Impressed is from a source, and conductive is an intrinsic property
+
+            $$\tilde{J}=\sigma\tilde{E}$$
+
+        \end{itemize}
+        
+      \item The homogenous form of Maxwell's equations can thus be written as:
+
+        $$\nabla\cdot\tilde{E}=0$$
+        $$\nabla\times\tilde{E}=-j\omega\mu\tilde{H}$$
+        $$\nabla\cdot\tilde{H}=0$$
+        $$\nabla\times\tilde{H}=(\sigma+j\omega\varepsilon)\tilde{E}$$
+
+    \end{itemize}
+
+  \item Far from sources, fields propagate like a plane wave (the circle becomes so large, it can be approximated as a line)
+
+  \item The $\tilde{J}$ conduction component is known as drift
+
+    \begin{itemize}
+
+      \item If the conductivity is non-zero, we can see from the equation above that:
+
+        $$\nabla\times\tilde{H}=j\omega\left( \varepsilon-\frac{j\sigma}{\omega} \right)\tilde{E}$$
+        $$\varepsilon_c=\varepsilon-\frac{j\sigma}{\omega}$$
+
+        \begin{itemize}
+
+          \item If $\frac{\sigma}{\omega}<<\varepsilon$, then the material is an insulator, and:
+
+            $$\varepsilon_c=\varepsilon$$
+
+          \item If $\frac{\sigma}{\omega}>>\varepsilon$, the material is conductive; Note: this means that a good conductor depends on the angular frequency
+
+          \item We can determine that:
+
+            $$\tan(\theta)=\frac{\sigma}{\omega\varepsilon}$$
+
+          \item If the tangent is approximately 0, the conductivity is negligible
+
+        \end{itemize}
+
+    \end{itemize}
+
+  \item Wave Equations
+
+    \begin{itemize}
+
+      \item From manipulating the first non-zero equation, we get:
+
+        $$\nabla\times\nabla\times\vec{E}-\omega^2\mu\varepsilon_c\tilde{E}=0$$
+
+      \item We can also get:
+
+        $$\nabla^2\vec{E}-\omega\mu\varepsilon_c\tilde{E}=0$$
+
+      \item In lossy media, $\sigma\neq0$ and $\varepsilon_c$ is a complex value. We assign $\gamma=-\omega^2\mu\varepsilon_c$, and can now write:
+
+        $$(\nabla^2-\gamma^2)\tilde{E}=0$$
+        $$(\nabla^2-\gamma^2)\tilde{H}=0$$
+
+      \item For lossless media, $\sigma=0$, and $\varepsilon_c$ is purely real
+
+      \item We can rewrite the equation as:
+
+        $$(\nabla^2+k^2)\tilde{E}(r)=0,\text{ where }r=(x,y,z)$$
+
+        \begin{itemize}
+
+          \item $k$ is the wave number, $\omega\sqrt{\mu\varepsilon}$
+
+        \end{itemize}
+
+    \end{itemize}
+
+\end{itemize}
+
+\end{document}
+
