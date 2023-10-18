@@ -196,21 +196,67 @@ $$\left\{\begin{array}{l}c=2.9979\cdot10^8\left[ \frac{\si{\meter}}{\si{\second}
 
     \begin{figure}[H]
       \centering
-      \includegraphics[width=.6\textwidth]{Figures/Lab Three/Peaks-1-4.png}
+      \includegraphics[width=.5\textwidth]{Figures/Lab Three/Peaks-1-4.png}
       \caption{1 and 4 Microstrip Lines}
       \label{fig:5}
     \end{figure}
 
     \begin{figure}[H]
       \centering
-      \includegraphics[width=.5\textwidth]{Figures/Lab Three/Peaks-4x2.png}
+      \includegraphics[width=.3\textwidth]{Figures/Lab Three/Peaks-4x2.png}
       \caption{4 Parallel Plate Microstrip Lines}
       \label{fig:6}
     \end{figure}
 
     As evident from figures \ref{fig:5} and \ref{fig:6}, all of the resonators differ in length and shape, causing the resonant frequencies to be different. The peaks are not the same as shown in the images above. The larger resonators have a larger wavelength due to the increase in the length of the transmission line.
 
-  \item 
+  \item Find dielectric permittivity. Compare with the value you extrapolate from Eq. 1 [shown below], using $h$, $w$ and $d$ at page 10
+
+    $$\varepsilon_{eff}=\frac{\varepsilon_r+1}{2}+\frac{\varepsilon_r-1}{2}\frac{1}{\sqrt{1+12\frac{h}{w}}};\quad h=.00127[\si{\meter}],\quad w=.001168[\si{\meter}]$$
+
+    We can use the following table to calculate $\varepsilon_r$:
+
+  \begin{center}
+    \begin{tabular}[H]{|c|c|c|}
+     \hline
+     & $\varepsilon_{eff,1}$ & $\varepsilon_{eff,2}$\\
+     \hline
+     1 Microstrip & 9.535 & 12.639 \\
+     \hline
+     4 Microstrip & 10.045 & 2.23 \\
+     \hline
+     4 Microstrip & .660 & — \\
+     Parallel Plate & & \\
+     \hline
+     4 Microstrip & .669 & —  \\
+     Parallel Plate & & \\
+     w/Plexiglass & & \\
+     \hline
+    \end{tabular}
+  \end{center}
+
+  From here, we get:
+
+  \begin{center}
+    \begin{tabular}[H]{|c|c|c|}
+     \hline
+     & $\varepsilon_{r,1}$ & $\varepsilon_{r,2}$\\
+     \hline
+     1 Microstrip & 12.131 & 16.174 \\
+     \hline
+     4 Microstrip & 12.796 & 2.6041 \\
+     \hline
+     4 Microstrip & .5566 & — \\
+     Parallel Plate & & \\
+     \hline
+     4 Microstrip & .5683 & —  \\
+     Parallel Plate & & \\
+     w/Plexiglass & & \\
+     \hline
+    \end{tabular}
+  \end{center}
+
+  Here, we can see that, for the single microstrip and quad microstrip, the actual values are greater than the effective, while, for the parallel plate and plexiglass ones, the values are slightly smaller than the effective permittivity.
 
   \item Place a piece of plexiglass on top of one of the microstrip line resonators. How does the transmission change? How do you explain your result?
 
