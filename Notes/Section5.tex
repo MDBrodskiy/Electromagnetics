@@ -149,6 +149,66 @@
 
     \end{itemize}
 
+  \item Power Density
+
+    $$S=E\times H\quad\text{(time-dependent)}$$
+
+    \begin{itemize}
+
+      \item Poynting Vector
+
+        $$P=\oint_A\,dS(\bold{\hat{n}}\cdot S)\quad\text{(in Watts)}$$
+
+      \item For time-harmonic, single frequency:
+
+        $$\tilde{S}=\frac{1}{2}Re\left\{\tilde{E}\times \tilde{H}\right\}\quad\text{(phasors)}$$
+
+      \item The average power density in circuits is similar to this:
+
+        $$P_{avg}=\frac{1}{2}Re\left\{ \tilde{V}\cdot\tilde{I} \right\}$$
+
+      \item The plane-wave average is:
+
+        $$\tilde{S}_{avg}=\frac{1}{2}\frac{|\tilde{E}|^2}{\eta}\bold{\hat{z}}\quad\text{(in Watts per square meter)}$$
+
+        where $\eta=\sqrt{\dfrac{\mu}{\varepsilon}}$
+
+      \item In circuits, the expressions are similar:
+
+        $$P_{avg}=\frac{1}{2}Re\left\{ \frac{|\tilde{V}|^2}{z_L} \right\}$$
+
+        \begin{itemize}
+
+          \item If $z_L$ is real, we can simply write:
+
+            $$P_{avg}=\frac{1}{2}\frac{|\tilde{V}|^2}{z_L}$$
+
+          \item For non-real $z_L$, we can write:
+
+            $$P_{avg}=\frac{1}{2}\frac{|\tilde{V}|^2}{|z_L|}\cos(\theta)$$
+
+        \end{itemize}
+
+      \item In a lossy medium, we can find:
+
+        $$\tilde{S}_{avg}=\frac{1}{2}|\tilde{E}|^2Re\left\{ \frac{1}{\eta} \right\}=\tilde{S}_{avg}\frac{1}{2}|E_0|^2e^{-2\alpha z}\bold{\hat{z}}\frac{\cos(\theta)}{|\eta|}$$
+
+    \end{itemize}
+
+  \item Important Formulas
+
+    \begin{itemize}
+
+      \item Some critical formulas for use with plane-waves are:
+
+        $$\alpha=\omega\left[ \frac{\mu\varepsilon\prime}{2}\left[\sqrt{1+\left(\frac{\varepsilon\prime\prime}{\varepsilon\prime}\right)^2} -1\right]\right]^\frac{1}{2}$$
+        $$\beta=\omega\left[ \frac{\mu\varepsilon\prime}{2}\left[\sqrt{1+\left(\frac{\varepsilon\prime\prime}{\varepsilon\prime}\right)^2} +1\right]\right]^\frac{1}{2}$$
+        $$\eta=\sqrt{\frac{\mu}{\varepsilon\prime}}\left( 1-j\frac{\varepsilon\prime\prime}{\varepsilon\prime} \right)^{-\frac{1}{2}}$$
+
+      \item If $\alpha=\beta$, then we are dealing with a good conductor
+
+    \end{itemize}
+
 \end{itemize}
 
 \end{document}
