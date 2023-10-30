@@ -1,0 +1,80 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Fundamentals of Electromagnetics
+% Professor: E. Marengo Fuentes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Wave Reflection and Transmission}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: E. Marengo Fuentes}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}
+
+  \item Given a phasor wave $\tilde{E}$ and a perpendicular propagation vector $\hat{k}$, we may write:
+
+    $$\tilde{E}=E_o\hat{u}e^{-jk\hat{k}\cdotr}$$
+    $$\hat{u}\cdot\hat{k}=0$$
+    $$r=(x,y,z)$$
+
+  \item The propagation constant may be defined as:
+
+    $$c_{prop}=\frac{\omega}{c}$$
+
+    where 
+
+    $$c=\frac{c_o}{\sqrt{\varepsilon_r\mu_r}}$$
+
+  \item We will apply transmission line theory to normal incidence and oblique incidence
+
+    \begin{itemize}
+
+      \item The reflection coefficient, $\Gamma$, will be defined relative to the electric field
+
+      \item There is also a transmission coefficient ($\tau$)
+        
+      \item We can write our formulas as:
+
+        $$\tilde{E}_t=E_o\tau\bold{\hat{x}}e^{-jk_zz}$$
+        $$\tilde{H}_t=\frac{E_o\tau}{\eta_2}\bold{\hat{y}}e^{-jk_zz}$$
+
+      \item We can then obtain the reflections
+
+        $$\tilde{E}_r=-\bold{\hat{x}}E_o\Gamma e^{jk_1z}$$
+        $$\tilde{H}_r=-\bold{\hat{y}}\frac{E_o\Gamma}{\eta_1} e^{jk_1z}$$
+
+      \item We can also get the formula
+
+        $$1+\Gamma=\tau$$
+        $$\Gamma=\frac{\eta_2-\eta_1}{\eta_2+\eta_1}$$
+        $$\tau=\frac{2\eta_2}{\eta_2+\eta_1}$$
+
+      \item The Poynting Vector can be redefined as
+
+        $$S_{av}=\frac{\bold{\hat{z}}|E_o|^2}{2\eta_1}\left( 1-|\Gamma|^2 \right)$$
+
+    \end{itemize}
+
+  \item Oblique Incidence
+
+    \begin{itemize}
+
+      \item Snell's Laws apply
+
+      \item The index of refraction is:
+
+        $$c=\frac{c_o}{n}$$
+        $$n=\sqrt{\varepsilon_r}$$
+        $$n_1\sin(\theta_i)=n_2\sin(\theta_t)$$
+
+    \end{itemize}
+
+\end{itemize}
+
+\end{document}
+
