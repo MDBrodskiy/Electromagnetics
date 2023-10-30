@@ -25,6 +25,7 @@
   * [**Electrostatics, Boundary Conditions, Potentials, and More**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Notes/Section3.pdf)
   * [**Magnetostatics**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Notes/Section4.pdf)
   * [**Plane-Wave Propagation**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Notes/Section5.pdf)
+  * [**Wave Reflection and Transmission**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Notes/Section6.pdf)
 * [**Labs**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Labs/)
   * [**Lab One**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Labs/Lab1.pdf)
   * [**Lab Two**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Labs/Lab2.pdf)
