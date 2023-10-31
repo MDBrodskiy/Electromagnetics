@@ -1,0 +1,61 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Fundamentals of Electromagnetics
+% Professor: E. Marengo Fuentes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Pre-Lab Assignment for Experiment 5}
+\date{November 1, 2023}
+\author{Michael Brodskiy\\ \small Professor: E. Marengo Fuentes}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+  \item For the pattern function of equation (1) to be valid, the observing antenna must be in the radiating antenna's far-field. This happens when the antennas are separated by about 20 wavelengths. For operating frequency at about $1[\si{\giga\hertz}]$, how far apart must the antennas be?
+
+    Since the operating frequency of the antenna is $1[\si{\giga\hertz}]$, or $1\cdot10^9[\si{\hertz}]$, we can write:
+
+    $$1\cdot10^9=\frac{3\cdot 10^8}{\lambda}$$
+    $$\lambda=\frac{3\cdot10^8}{1\cdot10^9}$$
+    $$\lambda=.3[\si{\meter}]$$
+
+    Since 20 wavelengths are needed, we get:
+
+    $$d=20(.3)=6[\si{\meter}]$$
+
+  \item Evaluate the radiation efficiency from 5kHz-15GHz assuming a center-fed dipole, half wave dipole at $1[\si{\giga\hertz}]$, made of copper with radius $a=.1[\si{\milli\meter}]$
+
+    The formula for the radiation efficiency is:
+
+    $$\eta=\frac{R_{rad}}{R_{rad}+R_{loss}}$$
+
+    Since we are working with $l=\frac{\lambda}{2}$, we can find the necessary values:
+
+    $$R_{loss}=\frac{\lambda}{4\pi a}\sqrt{\frac{\pi f\mu_c}{\sigma_c}}$$
+    $$R_{rad}=80\pi^2\left( \frac{1}{2} \right)^2$$
+
+    This gives us:
+
+    $$R_{loss}=\frac{.3}{4\pi\cdot1\cdot10^{-4}}\sqrt{\frac{\pi\cdot10^9\cdot(4\pi\cdot10^{-7})}{5.8\cdot10^7}}=1.97[\si{\ohm}]$$
+    $$R_{rad}=197.39[\si{\ohm}]$$
+
+    Finally, we can find the efficiency:
+
+    $$\eta=\frac{197.39}{197.39+1.97}$$
+    $$\eta=.99012$$
+
+    The radiation efficiency would then be 99.012\%
+
+  \item The experiment would have been conducted inside the anechoic chamber, which simulates an antenna range. Ideally, antennas should be tested outdoors, across fields or between mountains. The anechoic chamber is a specially designed room with walls covered with material that completely absorbs microwave radiation. Since no radiation reflects off the walls, there are no echoes (an-echoic), and the room behaves like free space for internally generated waves. The absorber material on the chamber walls is carbon-impregnated foam. It is somewhat fragile, being sensitive to fluorescent light. What would happen if the walls were conductive?
+
+    If a room were to have conductive walls, then, unlike an anechoic chamber, the walls would absorb some of the wave from the antenna, and reflect another portion of it. Thus, the antenna may experience increased noise and interference.
+
+\end{enumerate}
+
+\end{document}
+
