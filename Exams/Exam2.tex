@@ -20,39 +20,159 @@
 
     \begin{enumerate}
 
-      \item 
+      \item We can tell from the given function that the direction of \underline{propagation is $-\bold{\hat{x}}$}
 
-      \item 
+      \item The frequency is equal to the coefficient of $t$ divided by $2\pi$:
 
-      \item 
+        $$\boxed{f=\frac{1}{2\pi}(5\pi\cdot10^7)=2.5\cdot10^7\left[ \si{\hertz} \right]}$$
 
-      \item 
+      \item The wavelength may be calculated using the following formula:
 
-      \item 
+        $$\lambda=\frac{u_p}{f}$$
 
-      \item 
+        First, we calculate the propagation speed:
 
-      \item 
+        $$u_p=\frac{1}{\sqrt{\mu\varepsilon}}=\frac{1}{\sqrt{(36)(4\pi\cdot10^{-7})(8.85\cdot10^{-12})}}=5\cdot10^{7}\left[ \frac{\si{\meter}}{\si{\second}} \right]$$
 
-      \item 
+        And then the wavelength:
 
-      \item 
+        $$\boxed{\lambda=\frac{5\cdot10^7}{2.5\cdot10^7}=2[\si{\meter}]}$$
 
-      \item 
+      \item The wave number $k$ can be defined in several ways, one of which is:
+
+        $$k=\frac{2\pi}{\lambda}$$
+
+        This gives us:
+
+        $$\boxed{k=\frac{2\pi}{2}=\pi\left[ \frac{\text{rad}}{\si{\meter}} \right]}$$
+
+      \item The medium is lossless because there is no imaginary part to the permittivity or permeability
+
+      \item The wave impedance, $\eta$, may be defined as:
+
+        $$\eta=\sqrt{\frac{\mu}{\varepsilon}}$$
+
+        Thus we can find:
+
+        $$\boxed{\eta=\sqrt{\frac{(4\pi\cdot10^{-7})(4)}{(8.85\cdot10^{-12})(9)}}=251.213[\si{\ohm}]}$$
+
+      \item As a phasor, we can express the electric field as:
+
+        $$\boxed{\tilde{E}=10e^{j\pi x}\bold{\hat{y}}-3e^{j\left(\pi x-\frac{\pi}{2}\right)}\bold{\hat{z}}\,\left[ \frac{\si{\volt}}{\si{\meter}} \right]}$$
+
+      \item The average power density can be found according to the Poynting vector:
+
+        $$S_{avg}=\bold{\hat{x}}\frac{|\tilde{E}|^2}{2\eta}$$
+
+        We can find the magnitude of $\tilde{E}$:
+
+        $$|\tilde{E}|=\sqrt{(10)^2+(-3)^2}=10.44$$
+
+        Using the formula, we get:
+
+        $$\boxed{S_{avg}=\bold{\hat{x}}\frac{10.44^2}{502.416}=.216939\,\left[ \frac{\si{\watt}}{\si{\meter\squared}} \right]}$$
+
+      \item Now, we can find the magnetic field by using:
+
+        $$\tilde{H}=\frac{1}{\eta}(\bold{\hat{x}}\times\tilde{E})$$
+
+        Substituting the values we know, we get:
+
+        $$\tilde{H}=\frac{1}{251.213}\left[ \bold{\hat{x}}\times\left( 10e^{j\pi x}\bold{\hat{y}}-3e^{\pi x-\frac{\pi}{2}}\bold{\hat{z}} \right) \right]$$
+        $$\tilde{H}=\frac{1}{251.213}\left( 10e^{j\pi x}\bold{\hat{z}}+3e^{\pi x-\frac{\pi}{2}}\bold{\hat{y}} \right)$$
+        $$\boxed{\tilde{H}=.0398e^{j\pi x}\bold{\hat{z}}+.01194e^{j\left(\pi x-\frac{\pi}{2}\right)}\bold{\hat{y}}\,\left[ \frac{\si{\ampere}}{\si{\meter}} \right]}$$
+
+      \item We can then convert the above to a time-domain function:
+
+        $$\boxed{H=.0398\cos( \left( 5\pi\cdot10^7 \right)t+\pi x)\bold{\hat{z}}+.01194\sin( \left( 5\pi\cdot10^7 \right)t+\pi x)\bold{\hat{y}}\,\left[ \frac{\si{\ampere}}{\si{\meter}} \right]}$$
 
     \end{enumerate}
 
   \item
 
+    We are given the equation:
+
+    $$H(0,t)=\bold{\hat{y}}50\sin(\omega t+23^{\circ})\,\left[ \frac{\si{\milli\ampere}}{\si{\meter}} \right]$$
+
     \begin{enumerate}
 
       \item 
 
-      \item 
+        We know that, for a field equation, two terms go to zero when $z\to0$. These are:
+
+        $$\text{The attenuation factor: }e^{-\alpha z}$$
+        $$\text{The phase value: }-\beta z$$
+
+        We first check whether this is a good conductor:
+
+        $$\frac{\sigma}{\omega}=\frac{3}{2\pi\cdot10^4}=.000048$$
+        $$\varepsilon=(70)(8.85\cdot10^{-12})=6.195\cdot10^{-10}$$
+
+        Since the ratio of conductance to angular frequency is much greater than the permittivity, this is a good conductor. We can solve for these using the formulas:
+
+        $$\alpha=\sqrt{\pi f\mu\sigma}$$
+        $$\beta=\alpha$$
+
+        This gives us:
+
+        $$\alpha=\sqrt{\pi(10^4)(4\pi\cdot10^{-7})(3)}=.344144,\left[ \frac{\text{Np}}{\si{\meter}} \right]$$
+        $$\beta=.344144\,\left[ \frac{\text{rad}}{\si{\meter}} \right]$$
+
+        The phase shift may also be converted to radians:
+
+        $$23\cdot\frac{2\pi}{360}=.401426$$
+
+        Thus, we can fully define the formula as:
+
+        $$H(z,t)=50e^{-.344144z}\sin( \left( 2\pi\cdot10^4\right)t-.344144z+.401426)\bold{\hat{y}}\,\left[ \frac{\si{\milli\ampere}}{\si{\meter}} \right]$$
+        $$\boxed{H(z,t)=50e^{-.344144z}\cos( \left( 2\pi\cdot10^4\right)t-.344144z-1.16937)\bold{\hat{y}}\,\left[ \frac{\si{\milli\ampere}}{\si{\meter}} \right]}$$
 
       \item 
 
+        We know by definition, that:
+
+        $$E=\eta (\bold{\hat{z}}\times H)$$
+
+        Where:
+
+        $$\eta=(1+j)\frac{\alpha}{\sigma}$$
+
+        We can calculate the intrinsic impedance as:
+
+        $$\eta=(1+j)\frac{.344144}{3}=.114715+.114715j$$
+
+        Multiplying $H(z,t)$ by $\eta$ gives us:
+
+        $$E(z,t)=(.114715+.114715j)50e^{-.344144z}\cos( \left( 2\pi\cdot10^4\right)t-.344144z-1.16937)$$
+        $$E(z,t)=8.11158e^{j\frac{\pi}{4}}e^{-.344144z}\cos( \left( 2\pi\cdot10^4\right)t-.344144z-1.16937)$$
+        $$E(z,t)=8.11158e^{-.344144z}\cos( \left( 2\pi\cdot10^4\right)t-.344144z-.383972)$$
+        $$\boxed{E(z,t)=8.11158e^{-.344144z}\cos( \left( 2\pi\cdot10^4\right)t-.344144z-.383972)\bold{\hat{x}}\,\left[ \frac{\si{\milli\volt}}{\si{\meter}} \right]}$$
+
       \item 
+
+        To find the average power density at depth $z$, we may use the Poynting vector. This can be defined as:
+
+        $$S_{avg}=\bold{\hat{z}}\frac{|\tilde{E}(0)|^2}{2|\eta|}e^{-2\alpha z}\cos(\theta)$$
+
+        We know the magnitude of $\eta$ and $\tilde{E}$, as well as the angle and $\alpha$, which gives us:
+
+        $$S_{avg}=\bold{\hat{z}}\frac{|.00811158|^2}{2|.16223|}e^{-2(.344144) z}\cos\left( \frac{\pi}{4} \right)$$
+
+        This gives:
+
+        $$\boxed{S_{avg}=.143e^{-.688288z}\bold{\hat{z}}\,\left[ \frac{\si{\milli\watt}}{\si{\meter\squared}} \right]}$$
+
+      \item 
+
+        The power drop off can be found using:
+
+        $$10^{-\frac{20}{10}}\cdot100=1\%$$
+
+        Which we can then use in:
+
+        $$.01=e^{-.688z}$$
+        $$z=\frac{\ln(.01)}{-.688}$$
+        $$\boxed{z=6.69356[\si{\meter}]}$$
 
     \end{enumerate}
 
