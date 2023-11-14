@@ -1,0 +1,288 @@
+\documentclass[
+	letterpaper, % Paper size, specify a4paper (A4) or letterpaper (US letter)
+	10pt, % Default font size, specify 10pt, 11pt or 12pt
+]{CSUniSchoolLabReport}
+
+%----------------------------------------------------------------------------------------
+%	REPORT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{Experiment Six\\ Fundamentals of Electromagnetics Lab \\ EECE2530/1} % Report title
+
+\author{Michael \textsc{Brodskiy}\\ \small \href{mailto:Brodskiy.M@Northeastern.edu}{Brodskiy.M@Northeastern.edu}}
+
+\date{November 15, 2023} % Date of the report
+
+%----------------------------------------------------------------------------------------
+
+
+\begin{document}
+
+\maketitle % Insert the title, author and date using the information specified above
+
+\begin{center}
+	\begin{tabular}{l r}
+		Date Performed: & November 8, 2023 \\ % Date the experiment was performed
+        Partners: & Manas \textsc{Mahajan} \& Priyam \textsc{Modi} \\ % Partner names
+		Instructor: & Professor \textsc{Marengo-Fuentes} \\ % Instructor/supervisor
+        TAs: & Nicolas \textsc{Casilli} \& Farah \textsc{Ben Ayed} \\ % Teachers Assistants 
+	\end{tabular}
+\end{center}
+
+\newpage
+
+\begin{abstract}
+
+  The goal of this laboratory experiment is to determine certain quantities, such as the ``dog-leg path differential'' and refraction index of the plexi-glass from measurements taken. A laser is pointed at the plexi-glass shape and quantities are measured in certain angles to determine these.
+
+\end{abstract}
+
+\begin{flushleft}
+
+  \textsc{Keywords:} \underline{dog-leg}, \underline{refraction index}, \underline{plexi-glass}, \underline{laser}
+
+\end{flushleft}
+
+\newpage
+
+\section{Equipment}
+
+\hspace{.5 in} Available equipment included:\\
+
+\begin{itemize}
+
+  \item Class II Lasers with AC Power Adapter Switch
+
+  \item Ruler
+
+  \item Rotating Base with Tick Marks
+
+  \item Samples to Measure Optical Properties:
+
+    \begin{itemize}
+
+      \item Transparent Acrylic Half-Disk
+
+      \item Transparent Acrylic Plate
+
+    \end{itemize}
+
+\end{itemize}
+
+\section{Introduction \& Objectives}
+
+This experiment contains two parts: one in which the refraction index of the material is determined, and one in which the height difference of the dog-leg path is estimated.\\
+
+For the refraction index measurement, we began by placing the plexi-glass shape into a slot on a rotating base. This rotating base had designated tick marks indicating various angles. A total of 17 measurements were taken, beginning from $-80^{\circ}$, and stepping in $10^{\circ}$ increments up to $80^{\circ}$.\\
+
+For the height differential, four measurements were taken, beginning from $0^{\circ}$, and increasing in $20^{\circ}$ increments up to $60^{\circ}$. A derivation for a formula to determine the differential is then performed and used to find the value of the difference.
+
+\section{Results \& Analysis} 
+
+\subsection{Part I}
+
+The table below shows our gathered data for the first part of the experiment:
+
+\begin{center}
+\begin{tabular}[H]{|c|c|}
+  \hline
+  $\theta_i [^{\circ}]$ & $\theta_t [^{\circ}]$\\
+  \hline
+  -80 & 42\\ \hline
+  -70 & 39\\
+  \hline
+  -60 & 36\\
+  \hline
+  -50 & 32\\
+  \hline
+  -40 & 25\\
+  \hline
+  -30 & 20\\
+  \hline
+  -20 & 14\\
+  \hline
+  -10 & 9\\
+  \hline
+  0 & 2\\
+  \hline
+  10 & 4\\
+  \hline
+  20 & 11\\
+  \hline
+  30 & 17\\
+  \hline
+  40 & 22\\
+  \hline
+  50 & 27\\
+  \hline
+  60 & 32\\
+  \hline
+  70 & 37\\
+  \hline
+  80 & 41\\
+  \hline
+\end{tabular}
+\end{center}
+
+We can use the values in the table to estimate the index of refraction. It should be approximately the same for each incident angle. The process to find the index of refraction is applied in the example below to $80^{\circ}$:
+
+$$n_1\sin(\theta_i)=n_2\sin(\theta_t)$$
+$$n_1=1,\quad\theta_i=80,\quad\theta_t=41$$
+$$n_2=\frac{\sin(80)}{\sin(41)}$$
+$$n_2\approx1.472$$
+
+This process was repeated for all values to get:
+
+\begin{center}
+\begin{tabular}[H]{|c|c|}
+  \hline
+  $\theta_i [^{\circ}]$ & $n_2$\\
+  \hline
+  -80 & 1.472\\
+  \hline
+  -70 & 1.493\\
+  \hline
+  -60 & 1.473\\
+  \hline
+  -50 & 1.446\\
+  \hline
+  -40 & 1.521\\
+  \hline
+  -30 & 1.462\\
+  \hline
+  -20 & 1.414\\
+  \hline
+  -10 & 1.11\\
+  \hline
+  0 & 0\\
+  \hline
+  10 & 2.489\\
+  \hline
+  20 & 1.792\\
+  \hline
+  30 & 1.71\\
+  \hline
+  40 & 1.716\\
+  \hline
+  50 & 1.687\\
+  \hline
+  60 & 1.634\\
+  \hline
+  70 & 1.561\\
+  \hline
+  80 & 1.501\\
+  \hline
+\end{tabular}
+\end{center}
+
+We should get an approximate estimate for the refraction index by taking the average of all the numbers from the table above. In doing so, we find that $n_{avg}\approx1.49\bar{8}$. Looking up the value, the expected index of refraction should be $1.4899$. Thus, our percent error is:
+
+$$\frac{|1.49\bar{8}-1.4899|}{1.4899}\cdot100=.6029\%$$
+
+Thus, we can see that our measurements were fairly accurate.
+
+\subsection{Part II}
+
+For Part II, our data was as follows:
+
+$$t=35[\si{\milli\meter}]$$
+$$0[^{\circ}]\to20[^{\circ}]=8[\si{\milli\meter}]$$
+$$0[^{\circ}]\to40[^{\circ}]=13[\si{\milli\meter}]$$
+$$0[^{\circ}]\to60[^{\circ}]=22[\si{\milli\meter}]$$
+
+\begin{center}
+  \begin{tabular}[H]{|c|c|}
+    \hline
+    $\theta_i [^{\circ}]$ & $\theta_t [^{\circ}]$\\
+    \hline
+    0 & 0\\
+    \hline
+    20 & 14\\
+    \hline
+    40 & 32\\
+    \hline
+    60 & 46\\
+    \hline
+  \end{tabular}
+\end{center}
+
+We begin by deriving a formula. The set up looks as follows:
+
+\begin{figure}[H]
+  \centering
+  \include{Figures/6-2}
+  \caption{Set Up for Part II}
+  \label{fig:1}
+\end{figure}
+
+From the figure, we may write:
+
+$$t=t_1\cost(\theta_t)$$
+
+This gives us:
+
+$$\Delta = \frac{t}{\cos(\theta_t)}\sin(\theta_i-\theta_t)$$
+
+We may redefine the $\sin$ term as:
+
+$$\sin(\theta_i-\theta_t)=\sin(\theta_i)\cos(\theta_t)-\sin(\theta_t)\cos(\theta_i)$$
+
+Plugging this back into the formula for $\Delta$, we obtain:
+
+$$\Delta=t(\sin(\theta_i)-\tan(\theta_t)\cos(\theta_i))$$
+
+Next, we want to isolate $\theta_t$:
+
+$$\tan(\theta_t)=\frac{\sin(\theta_i)-\frac{\Delta}{t}}{\cos(\theta_i)}$$
+$$\theta_t=\tan^{-1}\left(\frac{\sin(\theta_i)-\frac{\Delta}{t}}{\cos(\theta_i)}\right)$$
+
+Employing Snell's law, we may write:
+
+$$n_2=\frac{n_1\sin(\theta_i)}{\sin\left( \tan^{-1} \left(\frac{\sin(\theta_i)-\frac{\Delta}{t}}{\cos(\theta_i)}\right)\right)}$$
+
+We can use the values from the table above to calculate $n_2$. An example calculation for $\theta_i=20\left[ ^{\circ} \right]$ is shown below:
+
+$$n_2=\frac{\sin(20)}{\sin\left(\tan^{-1}\left( \frac{\sin(20)-\frac{.008}{.035}}{\cos(20)} \right)\right)}$$
+$$n_2=2.854$$
+
+Repeating this for $\theta_i=40,60\left[ ^{\circ} \right]$, we get:
+
+\begin{center}
+  \begin{tabular}[H]{|c|c|}
+    \hline
+    $\theta_i\left[ ^{\circ} \right]$ & $n_2$\\
+    \hline
+    0 & 0\\
+    \hline
+    20 & 2.854\\
+    \hline
+    40 & 1.925\\
+    \hline
+    60 & 2.019\\
+    \hline
+  \end{tabular}
+\end{center}
+
+Once again averaging our answers, we find $n_{avg}=1.6995$, a bit less accurate than our first method, but still fairly close.
+
+\section{Conclusion}
+
+\subsection{Questions}
+
+\begin{enumerate}
+
+  \item Calculate the RI of the sample using the two methods and show the detailed optical path
+
+    See work in the ``Results and Analysis'' section.
+
+  \item Given the fact that the RI of plexi-glass would decrease when increasing the wavelength (optical dispersion), how would the $\theta_t$ and $\theta_r$ in the first experiment change and how would the dislocation in the second experiment change when switching the red laser to green laser?
+
+    Given that green has a lesser wavelength than red, we know that the refraction index would increase. To compensate, the transmitted angle would have to be smaller. Since the angle would be smaller, the dislocation would be smaller as well. On the other hand, $\theta_r$ does not change, as it does not depend on the refraction index of the material being transmitted into. We know that $\theta_r=\theta_i$, and it would remain so despite any change of color.
+
+\end{enumerate}
+
+\subsection{Summary}
+
+Overall, we were successfully able to use two methods to estimate the index of refraction of an acrylic/plexi-glass shape.
+
+\end{document}
