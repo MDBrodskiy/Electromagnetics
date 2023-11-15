@@ -38,6 +38,8 @@
     * [**Lab Six Pre-lab**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Labs/PreLabExp6.pdf)
 * [**Exams**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Exams/)
     * [**Exam 1**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Exams/Exam1.pdf)
+    * [**Exam 2**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Exams/Exam2.pdf)
+    * [**Exam 3**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Exams/Exam3.pdf)
 
 <!--
   * [**Chapter 1**](#Notes/Chapter\ 1)
