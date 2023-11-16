@@ -22,17 +22,95 @@
 
       \item 
 
-      \item 
+        The average power density (assuming propagation is occurring in the $\bold{\hat{z}}$ direction) may be defined as:
+
+        $$S_{avg}=\frac{|\vec{E}|^2}{2|\eta|}\bold{\hat{z}}$$
+
+        We know that the incident wave occurs in air, and that, for air, $\eta=\sqrt{\mu_o/\varepsilon_o}=376.819[\si{\ohm}]$. This gives us:
+
+        $$S_{avg}=\frac{|1750|^2}{376.819}$$
+        $$\boxed{S_{avg}=8.127\left[ \frac{\si{\kilo\watt}}{\si{\meter\squared}} \right]}$$
 
       \item 
 
-      \item 
+        First and foremost, we must check whether sea water is a good conductor. Given the parameters, we write:
+
+        $$\frac{\sigma}{\omega\varepsilon}=\frac{3.5}{2\pi(35\cdot10^6)(50)(8.85\cdot10^{-12})}$$
+        $$\frac{\sigma}{\omega\varepsilon}=35.967$$
+
+        Since $35.967>>1$, we know it is a good conductor. Thus, the wave impedance in the water may be found using:
+
+        $$\eta=(1+j)\frac{\alpha}{\sigma}$$
+
+        We can find the attenuation constant using:
+
+        $$\alpha=\sqrt{\pi f\mu\sigma}$$
+        $$\alpha=\sqrt{\pi(35\cdot10^6)(4\pi\cdot10^{-7})(3.5)}$$
+        $$\alpha\approx 22\left[ \frac{\text{Np}}{\si{\meter}} \right]$$
+
+        Furthermore, since this is a good conductor, we may write:
+
+        $$\beta\approx\alpha\approx22\left[ \frac{\text{rad}}{\si{\meter}} \right]$$
+
+        Thus, the impedance becomes:
+
+        $$\eta=(1+j)\frac{22}{3.5}$$
+        $$\boxed{\eta=6.286+6.286j}$$
 
       \item 
 
-      \item 
+        The reflection coefficient may be written as:
+
+        $$\Gamma=\frac{\eta_2-\eta_1}{\eta_2+\eta_1}$$
+        $$\Gamma=\frac{(6.286+6.286j)-376.819}{(6.286+6.286j)+376.819}$$
+        $$\boxed{\Gamma=-.9667+.03227j}$$
 
       \item 
+
+        The transmission coefficient may be defined as:
+
+        $$\tau=1+\Gamma$$
+        $$\tau=1+(-.9667+.03227j)$$
+        $$\boxed{\tau=.033\bar{3}+.03227j}$$
+
+      \item 
+
+        We can find the average power density of the reflected wave using:
+
+        $$S_{avg,r}=|\Gamma|^2S_{avg,i}$$
+
+        This gives:
+
+        $$S_{avg,r}=(.93555)S_{avg,i}$$
+        $$\boxed{S_{avg,r}=7.603\left[ \frac{\si{\kilo\watt}}{\si{\meter\squared}} \right]}$$
+
+
+      \item 
+
+        Since we know $.01[\si{\micro\volt\per\meter}]$ is necessary, we may write:
+
+        $$|\tau|E_oe^{-\alpha z}=.01\cdot10^{-6}$$
+        $$(.0464)(1750)e^{-22 z}=10^{-8}$$
+        $$e^{-22 z}=\frac{10^{-8}}{81.2}$$
+        $$-22 z=\ln(1.2315\cdot10^{-10})$$
+        $$\boxed{z=1.03716[\si{\meter}]}$$
+
+      \item 
+
+        We can use a formula similar to that from part (a):
+
+        $$S_{avg}(z)=\frac{|\vec{E}|^2}{2|\eta|}e^{-2\alpha z}\cos(\theta_{\eta})\bold{\hat{z}}$$
+
+        This gives us:
+
+        $$S_{avg}(z)=\frac{|1750|^2}{2|8.89|}e^{-44 z}\cos\left( \frac{\pi}{4} \right)\bold{\hat{z}}$$
+        $$S_{avg}(z)=121795e^{-44z}\bold{\hat{z}}$$
+
+        Now we plug in the value for the depth:
+
+        $$S_{avg}(1.03716)=121795e^{-44(1.03716)}$$
+        $$\boxed{S_{avg}(1.03716)=1.847\cdot10^{-15}\left[ \frac{\si{\watt}}{\si{\meter\squared}} \right]}$$
+
 
     \end{enumerate}
 
@@ -42,19 +120,157 @@
 
       \item 
 
-      \item 
+        The wave number may be defined by the coefficients of the exponential:
+
+        $$k=\sqrt{2^2+3^2}$$
+        $$k=3.61$$
+
+        We know that:
+
+        $$k=\frac{2\pi}{\lambda}\sqrt{\mu\varepsilon}$$
+
+        In air, this gives us:
+
+        $$\lambda=\frac{2\pi}{kc}$$
+        $$\lambda=\frac{2\pi}{(3.61)(3\cdot10^8)}$$
+        $$\boxed{\lambda=5.8[\si{\nano\meter}]}$$
 
       \item 
 
-      \item 
+        From part (a), we can find $\omega$ and $f$:
+
+        $$\omega=\frac{2\pi}{\lambda}$$
+
+        This then gives us:
+
+        $$\omega=\frac{2\pi}{5.8\cdot10^{-9}}$$
+        $$\boxed{\omega=1.083\left[ \frac{\text{rad}}{\si{\second}} \right]}$$
+
+        Or:
+
+        $$\boxed{f=172.365\left[ \si{\mega\hertz} \right]}$$
+
 
       \item 
 
-      \item 
+        The incidence angle can be found according to:
+
+        $$\theta_i=\cos^{-1}\left( \frac{2}{3} \right)$$
+        $$\boxed{\theta_i=48.19^{\circ}}$$
 
       \item 
 
+        We can find the electric field via the formula:
+
+        $$E=\eta(\bold{\hat{z}}\times H)$$
+
+        This gives:
+
+        $$E=376.819e^{-j(2x+3z)}\left|\begin{matrix}\bold{\hat{x}} & \bold{\hat{y}} & \bold{\hat{z}}\\ 0 & 0 & 1\\ 12 & -14 & -8 \end{matrix}\right|$$
+        $$E=376.819e^{-j(2x+3z)}(14\bold{\hat{x}}-12\bold{\hat{y}})(10^{-3})$$
+        $$\boxed{E=(5.276\bold{\hat{x}}-4.522\bold{\hat{y}})e^{-j(2x+3z)}\left[ \frac{\si{\volt}}{\si{\meter}} \right]}$$
+
       \item 
+
+        Since $\mu_1=\mu_2$, we can find the perpendicular components as:
+
+        $$\Gamma_{\perp}=\frac{\cos(\theta_i)-\sqrt{(\varepsilon_2/\varepsilon_1)-\sin^2(\theta_i)}}{\cos(\theta_i)+\sqrt{(\varepsilon_2/\varepsilon_1)-\sin^2(\theta_i)}}$$
+
+        This gives us:
+
+        $$\Gamma_{\perp}=\frac{\cos(48.19)-\sqrt{(3.5)-\sin^2(48.19)}}{\cos(48.19)+\sqrt{(3.5)-\sin^2(48.19)}}$$
+        $$\boxed{\Gamma_{\perp}=-.44}$$
+
+        According to $\tau_{\perp}=1+\Gamma_{\perp}$, we get:
+
+        $$\boxed{\tau_{\perp}=.56}$$
+
+        For the parallel reflection, we may write:
+
+        $$\Gamma_{\parallel}=\frac{-(\varepsilon_2/\varepsilon_1)\cos(\theta_i)+\sqrt{(\varepsilon_2/\varepsilon_1)-\sin^2(\theta_i)}}{(\varepsilon_2/\varepsilon_1)\cos(\theta_i)+\sqrt{(\varepsilon_2/\varepsilon_1)-\sin^2(\theta_i)}}$$
+
+        This gives us:
+
+        $$\Gamma_{\parallel}=\frac{-(3.5)\cos(48.19)+\sqrt{(3.5)-\sin^2(48.19)}}{(3.5)\cos(48.19)+\sqrt{(3.5)-\sin^2(48.19)}}$$
+        $$\boxed{\Gamma_{\parallel}=-.1525}$$
+
+        We also know:
+
+        $$\tau_{\parallel}=(1+\Gamma_{\parallel})\frac{\cos(\theta_i)}{\cos(\theta_t)}$$
+
+        From Snell's law, we may write:
+
+        $$\theta_t=\sin^{-1}\left( \frac{n_1}{n_2}\sin(48.19) \right)$$
+        $$\theta_t=\sin^{-1}\left( \frac{1}{\sqrt{3.5}}\sin(48.19) \right)$$
+        $$\theta_t=23.4789\left[ ^{\circ} \right]$$
+
+        Plugging this back in, we get:
+
+        $$\tau_{\parallel}=(1+(-.1525))\frac{\cos(48.19)}{\cos(23.4789)}$$
+        $$\boxed{\tau_{\parallel}=.616}$$
+
+      \item 
+
+        First, we find the parallel component of the reflected wave:
+
+        $$\Gamma_{\parallel}E_i=-.1525E_i$$
+
+        This gives us:
+
+        $$E_{r,\parallel}=(-.80459\bold{\hat{x}}+.6896\bold{\hat{y}})e^{-j(2x+3z)}$$
+
+        Next, we find the perpendicular component:
+
+        $$\Gamma_{\perp}E_i=-.44E_i$$
+
+        This gives us:
+
+        $$E_{r,\perp}=(-2.3214\bold{\hat{x}}+1.9897\bold{\hat{y}})e^{-j(2x+3z)}$$
+
+        We then unite these to get the overall reflected wave (note, we keep the negative sign on the $\bold{\hat{x}}$ direction):
+
+        $$E_r=((\sqrt{2.3214^2+.80459^2})\bold{\hat{x}}+(\sqrt{.6896^2+1.9897^2})\bold{\hat{y}})e^{-j(2x+3z)}$$
+        $$\boxed{E_r=(-2.4569\bold{\hat{x}}+2.1058\bold{\hat{y}})e^{-j(2x+3z)}\left[ \frac{\si{\volt}}{\si{\meter}} \right]}$$
+
+      \item 
+
+        First, we find the parallel component of the transmitted wave:
+
+        $$\tau_{\parallel}E_i=.616E_i$$
+
+        This gives us:
+
+        $$E_{t,\parallel}=(3.25\bold{\hat{x}}-2.79\bold{\hat{y}})e^{-j(2x+3z)}$$
+
+        Next, we find the perpendicular component:
+
+        $$\tau_{\perp}E_i=.56E_i$$
+
+        This gives us:
+
+        $$E_{t,\perp}=(2.954\bold{\hat{x}}-2.5323\bold{\hat{y}})e^{-j(2x+3z)}$$
+
+        We then unite these to get the overall transmitted wave (note, we keep the negative sign on the $\bold{\hat{y}}$ direction):
+
+        $$E_t=((\sqrt{3.25^2+2.954^2})\bold{\hat{x}}+(\sqrt{2.79^2+2.5323^2})\bold{\hat{y}})e^{-j(2x+3z)}$$
+        $$\boxed{E_t=(4.392\bold{\hat{x}}-3.768\bold{\hat{y}})e^{-j(2x+3z)}\left[ \frac{\si{\volt}}{\si{\meter}} \right]}$$
+
+      \item 
+
+        The average power density transmitted into the medium may be expressed as:
+
+        $$S_{avg}=\frac{|E_t|^2}{2|\eta_2|}$$
+
+        We first find the impedance of the medium:
+
+        $$\eta_2=\sqrt{\frac{\mu_o}{3.5\varepsilon_o}}$$
+        $$\eta_2=\sqrt{\frac{4\pi\cdot10^{-7}}{3.5\cdot8.85\cdot10^{-12}}}$$
+        $$\eta_2=201.418[\si{\ohm}]$$
+
+        This gives us:
+
+        $$S_{avg}=\frac{(4.392)^2+(3.768)^2}{2(201.418)}$$
+        $$\boxed{S_{avg}=.0831\left[ \frac{\si{\watt}}{\si{\meter\squared}} \right]}$$
 
     \end{enumerate}
 
