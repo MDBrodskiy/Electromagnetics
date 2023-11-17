@@ -28,8 +28,8 @@
 
         We know that the incident wave occurs in air, and that, for air, $\eta=\sqrt{\mu_o/\varepsilon_o}=376.819[\si{\ohm}]$. This gives us:
 
-        $$S_{avg}=\frac{|1750|^2}{376.819}$$
-        $$\boxed{S_{avg}=8.127\left[ \frac{\si{\kilo\watt}}{\si{\meter\squared}} \right]}$$
+        $$S_{avg}=\frac{|1750|^2}{2\cdot376.819}$$
+        $$\boxed{S_{avg}=4.064\left[ \frac{\si{\kilo\watt}}{\si{\meter\squared}} \right]}$$
 
       \item 
 
@@ -82,35 +82,26 @@
         This gives:
 
         $$S_{avg,r}=(.93555)S_{avg,i}$$
-        $$\boxed{S_{avg,r}=7.603\left[ \frac{\si{\kilo\watt}}{\si{\meter\squared}} \right]}$$
+        $$\boxed{S_{avg,r}=3.802\left[ \frac{\si{\kilo\watt}}{\si{\meter\squared}} \right]}$$
 
 
       \item 
 
-        Since we know $.01[\si{\micro\volt\per\meter}]$ is necessary, we may write:
+        Since we know $1[\si{\micro\volt\per\meter}]$ is necessary, we may write:
 
-        $$|\tau|E_oe^{-\alpha z}=.01\cdot10^{-6}$$
-        $$(.0464)(1750)e^{-22 z}=10^{-8}$$
-        $$e^{-22 z}=\frac{10^{-8}}{81.2}$$
-        $$-22 z=\ln(1.2315\cdot10^{-10})$$
-        $$\boxed{z=1.03716[\si{\meter}]}$$
+        $$|\tau|E_oe^{-\alpha z}=.\cdot10^{-6}$$
+        $$(.0464)(1750)e^{-22 z}=10^{-6}$$
+        $$e^{-22 z}=\frac{10^{-6}}{81.2}$$
+        $$-22 z=\ln(1.2315\cdot10^{-8})$$
+        $$\boxed{z=.8278[\si{\meter}]}$$
 
       \item 
 
-        We can use a formula similar to that from part (a):
+        We can use a formula implementing our answer from part (a):
 
-        $$S_{avg}(z)=\frac{|\vec{E}|^2}{2|\eta|}e^{-2\alpha z}\cos(\theta_{\eta})\bold{\hat{z}}$$
-
-        This gives us:
-
-        $$S_{avg}(z)=\frac{|1750|^2}{2|8.89|}e^{-44 z}\cos\left( \frac{\pi}{4} \right)\bold{\hat{z}}$$
-        $$S_{avg}(z)=121795e^{-44z}\bold{\hat{z}}$$
-
-        Now we plug in the value for the depth:
-
-        $$S_{avg}(1.03716)=121795e^{-44(1.03716)}$$
-        $$\boxed{S_{avg}(1.03716)=1.847\cdot10^{-15}\left[ \frac{\si{\watt}}{\si{\meter\squared}} \right]}$$
-
+        $$S_{t}=|\tau|^2S_ie^{-44z}$$
+        $$S_{t}=|\sqrt{.0333^2+.0322^2}|^2(4064)e^{-44(.8278)}$$
+        $$S_{t}=1.325\cdot10^{-15}\left[ \frac{\si{\watt}}{\si{\meter\squared}} \right]$$
 
     \end{enumerate}
 
@@ -123,17 +114,17 @@
         The wave number may be defined by the coefficients of the exponential:
 
         $$k=\sqrt{2^2+3^2}$$
-        $$k=3.61$$
+        $$k=3.61\left[ \frac{\text{rad}}{\si{\meter}} \right]$$
 
         We know that:
 
-        $$k=\frac{2\pi}{\lambda}\sqrt{\mu\varepsilon}$$
+        $$k=\frac{2\pi}{\lambda}$$
 
         In air, this gives us:
 
-        $$\lambda=\frac{2\pi}{kc}$$
-        $$\lambda=\frac{2\pi}{(3.61)(3\cdot10^8)}$$
-        $$\boxed{\lambda=5.8[\si{\nano\meter}]}$$
+        $$\lambda=\frac{2\pi}{k}$$
+        $$\lambda=\frac{2\pi}{(3.61)}$$
+        $$\boxed{\lambda=1.74[\si{\meter}]}$$
 
       \item 
 
@@ -144,7 +135,7 @@
         This then gives us:
 
         $$\omega=\frac{2\pi}{5.8\cdot10^{-9}}$$
-        $$\boxed{\omega=1.083\left[ \frac{\text{rad}}{\si{\second}} \right]}$$
+        $$\boxed{\omega=1.083\cdot10^9\left[ \frac{\text{rad}}{\si{\second}} \right]}$$
 
         Or:
 
@@ -155,20 +146,20 @@
 
         The incidence angle can be found according to:
 
-        $$\theta_i=\cos^{-1}\left( \frac{2}{3} \right)$$
-        $$\boxed{\theta_i=48.19^{\circ}}$$
+        $$\theta_i=\tan^{-1}\left( \frac{2}{3} \right)$$
+        $$\boxed{\theta_i=33.69^{\circ}}$$
 
       \item 
 
         We can find the electric field via the formula:
 
-        $$E=\eta(\bold{\hat{z}}\times H)$$
+        $$E=-\eta(\bold{\hat{n}}\times H)$$
 
-        This gives:
+        where $\bold{\hat{n}}$ is the direction of propagation. This gives:
 
-        $$E=376.819e^{-j(2x+3z)}\left|\begin{matrix}\bold{\hat{x}} & \bold{\hat{y}} & \bold{\hat{z}}\\ 0 & 0 & 1\\ 12 & -14 & -8 \end{matrix}\right|$$
-        $$E=376.819e^{-j(2x+3z)}(14\bold{\hat{x}}-12\bold{\hat{y}})(10^{-3})$$
-        $$\boxed{E=(5.276\bold{\hat{x}}-4.522\bold{\hat{y}})e^{-j(2x+3z)}\left[ \frac{\si{\volt}}{\si{\meter}} \right]}$$
+        $$E=-376.819e^{-j(2x+3z)}\left|\begin{matrix}\bold{\hat{x}} & \bold{\hat{y}} & \bold{\hat{z}}\\ 1 & 0 & 1\\ 12 & -14 & -8 \end{matrix}\right|$$
+        $$E=-376.819e^{-j(2x+3z)}(14\bold{\hat{x}}+20\bold{\hat{y}}-14\bold{\hat{z}})(10^{-3})$$
+        $$\boxed{E=(-5.276\bold{\hat{x}}-7.536\bold{\hat{y}}+5.276\bold{\hat{z}})e^{-j(2x+3z)}\left[ \frac{\si{\volt}}{\si{\meter}} \right]}$$
 
       \item 
 
@@ -178,12 +169,12 @@
 
         This gives us:
 
-        $$\Gamma_{\perp}=\frac{\cos(48.19)-\sqrt{(3.5)-\sin^2(48.19)}}{\cos(48.19)+\sqrt{(3.5)-\sin^2(48.19)}}$$
-        $$\boxed{\Gamma_{\perp}=-.44}$$
+        $$\Gamma_{\perp}=\frac{\cos(33.69)-\sqrt{(3.5)-\sin^2(33.69)}}{\cos(33.69)+\sqrt{(3.5)-\sin^2(33.69)}}$$
+        $$\boxed{\Gamma_{\perp}=-.365}$$
 
         According to $\tau_{\perp}=1+\Gamma_{\perp}$, we get:
 
-        $$\boxed{\tau_{\perp}=.56}$$
+        $$\boxed{\tau_{\perp}=.635}$$
 
         For the parallel reflection, we may write:
 
@@ -191,8 +182,8 @@
 
         This gives us:
 
-        $$\Gamma_{\parallel}=\frac{-(3.5)\cos(48.19)+\sqrt{(3.5)-\sin^2(48.19)}}{(3.5)\cos(48.19)+\sqrt{(3.5)-\sin^2(48.19)}}$$
-        $$\boxed{\Gamma_{\parallel}=-.1525}$$
+        $$\Gamma_{\parallel}=\frac{-(3.5)\cos(33.69)+\sqrt{(3.5)-\sin^2(33.69)}}{(3.5)\cos(33.69)+\sqrt{(3.5)-\sin^2(33.69)}}$$
+        $$\boxed{\Gamma_{\parallel}=-.24}$$
 
         We also know:
 
@@ -200,60 +191,72 @@
 
         From Snell's law, we may write:
 
-        $$\theta_t=\sin^{-1}\left( \frac{n_1}{n_2}\sin(48.19) \right)$$
-        $$\theta_t=\sin^{-1}\left( \frac{1}{\sqrt{3.5}}\sin(48.19) \right)$$
-        $$\theta_t=23.4789\left[ ^{\circ} \right]$$
+        $$\theta_t=\sin^{-1}\left( \frac{n_1}{n_2}\sin(33.69) \right)$$
+        $$\theta_t=\sin^{-1}\left( \frac{1}{\sqrt{3.5}}\sin(33.69) \right)$$
+        $$\theta_t=17.35\left[ ^{\circ} \right]$$
 
         Plugging this back in, we get:
 
-        $$\tau_{\parallel}=(1+(-.1525))\frac{\cos(48.19)}{\cos(23.4789)}$$
-        $$\boxed{\tau_{\parallel}=.616}$$
+        $$\tau_{\parallel}=(1+(-.24))\frac{\cos(33.69)}{\cos(17.35)}$$
+        $$\boxed{\tau_{\parallel}=.662}$$
 
       \item 
 
         First, we find the parallel component of the reflected wave:
 
-        $$\Gamma_{\parallel}E_i=-.1525E_i$$
+        $$\Gamma_{\parallel}E_i=-.24E_i$$
+        $$\Gamma_{\parallel}E_i=-.24(\sqrt{2\cdot5.276^2})$$
 
         This gives us:
 
-        $$E_{r,\parallel}=(-.80459\bold{\hat{x}}+.6896\bold{\hat{y}})e^{-j(2x+3z)}$$
+        $$E_{r,\parallel}=-1.79\left[ \frac{\si{\volt}}{\si{\meter}} \right]$$
 
         Next, we find the perpendicular component:
 
-        $$\Gamma_{\perp}E_i=-.44E_i$$
+        $$\Gamma_{\perp}E_i=-.365E_i$$
+        $$\Gamma_{\perp}E_i=-.365(-7.54)$$
 
         This gives us:
 
-        $$E_{r,\perp}=(-2.3214\bold{\hat{x}}+1.9897\bold{\hat{y}})e^{-j(2x+3z)}$$
+        $$E_{r,\perp}=2.75\left[ \frac{\si{\volt}}{\si{\meter}} \right]$$
 
-        We then unite these to get the overall reflected wave (note, we keep the negative sign on the $\bold{\hat{x}}$ direction):
+        We then unite these to get the overall reflected wave:
 
-        $$E_r=((\sqrt{2.3214^2+.80459^2})\bold{\hat{x}}+(\sqrt{.6896^2+1.9897^2})\bold{\hat{y}})e^{-j(2x+3z)}$$
-        $$\boxed{E_r=(-2.4569\bold{\hat{x}}+2.1058\bold{\hat{y}})e^{-j(2x+3z)}\left[ \frac{\si{\volt}}{\si{\meter}} \right]}$$
+        $$E_r=((-1.79\cos(33.69))\bold{\hat{x}}+(2.75)\bold{\hat{y}}+(-1.79\sin(33.69))\bold{\hat{z}})e^{-3.61j(\cos(33.69)x-\sin(33.69)z)}$$
+        $$\boxed{E_r=(-1.5\bold{\hat{x}}+2.75\bold{\hat{y}}-\bold{\hat{z}})e^{-j(2x-3z)}\left[ \frac{\si{\volt}}{\si{\meter}} \right]}$$
 
       \item 
 
         First, we find the parallel component of the transmitted wave:
 
-        $$\tau_{\parallel}E_i=.616E_i$$
+        $$\tau_{\parallel}E_i=.662E_i$$
+        $$\tau_{\parallel}E_i=.662\sqrt{2\cdot5.276^2}$$
 
         This gives us:
 
-        $$E_{t,\parallel}=(3.25\bold{\hat{x}}-2.79\bold{\hat{y}})e^{-j(2x+3z)}$$
+        $$E_{t,\parallel}=4.94\left[ \frac{\si{\volt}}{\si{\meter}} \right]$$
 
         Next, we find the perpendicular component:
 
-        $$\tau_{\perp}E_i=.56E_i$$
+        $$\tau_{\perp}E_i=.635E_i$$
+        $$\tau_{\perp}E_i=.635(-7.54)$$
 
         This gives us:
 
-        $$E_{t,\perp}=(2.954\bold{\hat{x}}-2.5323\bold{\hat{y}})e^{-j(2x+3z)}$$
+        $$E_{t,\perp}=-4.79\left[ \frac{\si{\volt}}{\si{\meter}} \right]$$
 
-        We then unite these to get the overall transmitted wave (note, we keep the negative sign on the $\bold{\hat{y}}$ direction):
+        We then unite these to get the overall transmitted wave:
 
-        $$E_t=((\sqrt{3.25^2+2.954^2})\bold{\hat{x}}+(\sqrt{2.79^2+2.5323^2})\bold{\hat{y}})e^{-j(2x+3z)}$$
-        $$\boxed{E_t=(4.392\bold{\hat{x}}-3.768\bold{\hat{y}})e^{-j(2x+3z)}\left[ \frac{\si{\volt}}{\si{\meter}} \right]}$$
+        $$E_t=((4.94\cos(17.35))\bold{\hat{x}}-4.79\bold{\hat{y}}+(4.94\sin(17.35))\bold{\hat{z}})e^{-jk_2(\sin(17.35)x+\cos(17.35)z)}$$
+
+        First, we must find the new wave number:
+
+        $$k_2=\frac{\sin(33.69)}{\sin(17.35)}3.61$$
+        $$k_2=6.715\left[ \frac{\text{rad}}{\si{\meter}} \right]$$
+
+        Now we get:
+
+        $$E_t=(4.715\bold{\hat{x}}-4.79\bold{\hat{y}}+1.47\bold{\hat{z}})e^{-j(2x+6.41z)}$$
 
       \item 
 
@@ -269,8 +272,8 @@
 
         This gives us:
 
-        $$S_{avg}=\frac{(4.392)^2+(3.768)^2}{2(201.418)}$$
-        $$\boxed{S_{avg}=.0831\left[ \frac{\si{\watt}}{\si{\meter\squared}} \right]}$$
+        $$S_{avg}=\frac{(4.715)^2+(-4.79)^2+(1.47)^2}{2(201.418)}$$
+        $$\boxed{S_{avg}=.1175\left[ \frac{\si{\watt}}{\si{\meter\squared}} \right]}$$
 
     \end{enumerate}
 
