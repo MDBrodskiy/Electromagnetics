@@ -42,6 +42,7 @@
     * [**Exam 1**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Exams/Exam1.pdf)
     * [**Exam 2**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Exams/Exam2.pdf)
     * [**Exam 3**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Exams/Exam3.pdf)
+    * [**Final Exam**](https://github.com/MDBrodskiy/Electromagnetics/tree/master/Exams/FinalExam.pdf)
 
 <!--
   * [**Chapter 1**](#Notes/Chapter\ 1)
