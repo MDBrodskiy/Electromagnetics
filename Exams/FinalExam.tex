@@ -1,0 +1,278 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Fundamentals of Electromagnetics
+% Professor: E. Marengo Fuentes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Final Exam}
+\date{December 12, 2023}
+\author{Michael Brodskiy\\ \small Professor: E. Marengo Fuentes}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+  \item 
+
+    \begin{enumerate}
+
+      \item 
+
+        We know that, with an antenna centered at the origin, we may express the phasor as:
+
+        $$\tilde{E}_\theta=j60I_o\left[ \frac{\cos\left( \frac{\pi}{2}\cos(\theta) \right)}{\sin(\theta)} \right]\left(\frac{e^{-jkR}}{R}\right)$$
+
+      \item 
+
+        We know that the resistance as perceive by the transmission line may be written as:
+
+        $$R_{in}=R_{rad}+R_{loss}$$
+
+        A half-wave dipole means that $l=.5\lambda$. We can use the following formula for radiation resistance:
+
+        $$R_{rad}=80\pi^2\left( \frac{l}{\lambda} \right)^2$$
+
+        And we can use the following formula for resistive loss:
+
+        $$R_{loss}=$$
+
+      \item 
+
+      \item 
+
+      \item 
+
+      \item 
+
+      \item 
+
+      \item 
+
+      \item 
+
+    \end{enumerate}
+
+  \item 
+
+    \begin{enumerate}
+        
+      \item 
+
+      \item 
+
+      \item 
+
+      \item 
+
+      \item 
+
+    \end{enumerate}
+
+  \item
+
+    \begin{enumerate}
+
+      \item 
+
+        We can find the parallel polarization reflection coefficient using the formula:
+
+        $$\Gamma_{\parallel}=\frac{\eta_2\cos(\theta_t)-\eta_1\cos(\theta_i)}{\eta_2\cos(\theta_i)+\eta_1\cos(\theta_i)}$$
+
+        We can first find the transmitted angle using Snell's Law:
+
+        $$n_1\sin(\theta_i)=n_2\sin(\theta_t)$$
+        $$\theta_t=\sin^{-1}\left(\frac{n_1\sin(\theta_i)}{n_1}\right)$$
+        $$\theta_t=\sin^{-1}\left(\frac{(1)\sin(50)}{\sqrt{4}}\right)$$
+        $$\theta_t=22.52$$
+
+        We apply this information to our formula:
+
+        $$\Gamma_{\parallel}=\frac{\sqrt{4}\cos(22.52)-(1)\cos(50)}{\sqrt{4}\cos(22.52)+(1)\cos(50)}$$
+        $$\boxed{\Gamma_{\parallel}=.4838}$$
+
+
+      \item 
+
+        We know that the transmission coefficient is related to the reflection coefficient for parallel polarization by:
+
+        $$\tau_{\parallel}=(1+\Gamma_{\parallel})\frac{\cos(\theta_i)}{\cos(\theta_t)}$$
+
+        This gives us:
+
+        $$\tau_{\parallel}=(1+.4838)\frac{\cos(50)}{\cos(22.52)}$$
+        $$\boxed{\tau_{\parallel}=1.0325}$$
+
+      \item 
+
+        For perpendicular polarization, we know that the reflection coefficient may be expressed as:
+
+        $$\Gamma_{\perp}=\frac{\eta_2\cos(\theta_i)-\eta_1\cos(\theta_t)}{\eta_2\cos(\theta_i)+\eta_1\cos(\theta_t)}$$
+
+        This yields:
+
+        $$\Gamma_{\perp}=\frac{2\cos(50)-(1)\cos(22.52)}{2\cos(50)+(1)\cos(22.52)}$$
+        $$\boxed{\Gamma_{\perp}=.1638}$$
+
+      \item 
+
+        We know that the transmission coefficient relation to the perpendicular reflection coefficient is:
+
+        $$\tau_{\perp}=(1+\Gamma_{\perp})$$
+
+        This gives us:
+
+        $$\tau_{\perp}=(1+.1638)$$
+        $$\boxed{\tau_{\perp}=1.1638}$$
+
+      \item 
+
+        The Brewster angle can be determined using:
+
+        $$\theta_B=\tan^{-1}\left( \sqrt{\frac{\varepsilon_2}{\varepsilon_1}} \right)$$
+
+        This gives us:
+
+        $$\theta_{B\parallel}=\tan^{-1}\left( \sqrt{4} \right)$$
+        $$\theta_{B\parallel}=\tan^{-1}\left( 2\right)$$
+        $$\boxed{\theta_{B\parallel}=63.435^{\circ}}$$
+
+      \item 
+
+        We know that, for a nonmagnetic material (as the one described in the problem), the Brewster angle exists only for the parallel polarization (thus the use of $\theta_{B\parallel}$). A beam entering a medium at a this angle of incidence would fully transmit its perpendicular component (only the perpendicular component is reflected). This can be explained in the diagram below:
+
+        \begin{figure}[h]
+          \centering
+          \include{Figures/Brewster.tex}
+          \caption{Brewster Angle Scenario}
+          \label{fig:1}
+        \end{figure}
+
+        Given a coordinate set $(\perp,\parallel)$ representing each components strength, we can see that for the incident wave and transmitted wave, the perpendicular components are equal, since it is fully transmitted. On the other hand, there is some parallel reflection, which can be represented by the transmission and reflection coefficients.
+
+      \item 
+
+        We now assume that the same scenario occurs, but with the Brewster angle. This gives us:
+
+        $$n_1\sin(\theta_i)=n_2\sin(\theta_t)$$
+        $$\theta_t=\sin^{-1}\left(\frac{n_1\sin(\theta_i)}{n_2}\right)$$
+        $$\theta_t=\sin^{-1}\left(\frac{\sin(63.435)}{2}\right)$$
+        $$\boxed{\theta_t=26.565^{\circ}}$$
+
+        From here, we can find the perpendicular reflection coefficient:
+
+        $$\Gamma_{\perp}=\frac{\eta_2\cos(\theta_i)-\eta_1\cos(\theta_t)}{\eta_2\cos(\theta_i)+\eta_1\cos(\theta_t)}$$
+        $$\Gamma_{\perp}=\frac{2\cos(63.435)-\cos(26.565)}{2\cos(63.435)+\cos(26.565)}$$
+        $$\boxed{\Gamma_{\perp}=0}$$
+
+        Note that the above result makes sense, as we expect the perpendicular component to be fully transmitted. The parallel reflection becomes:
+
+        $$\Gamma_{\parallel}=\frac{\eta_2\cos(\theta_t)-\eta_1\cos(\theta_i)}{\eta_2\cos(\theta_t)+\eta_1\cos(\theta_i)}$$
+        $$\Gamma_{\parallel}=\frac{2\cos(26.565)-\cos(63.435)}{2\cos(26.565)+\cos(63.435)}$$
+        $$\boxed{\Gamma_{\parallel}=.6}$$
+
+        The perpendicular transmission may be expressed as:
+
+        $$\tau_{\perp}=(1+\Gamma_{\perp})$$
+        $$\boxed{\tau_{\perp}=1}$$
+
+        Again, this makes sense as the perpendicular component will be fully transmitted. The parallel transmission is:
+
+        $$\tau_{\parallel}=(1+\Gamma_{\parallel})\frac{\cos(\theta_i)}{\cos(\theta_t)}$$
+        $$\tau_{\parallel}=(1+.6)\frac{\cos(63.435)}{\cos(26.565)}$$
+        $$\boxed{\tau_{\parallel}=.8}$$
+
+      \item 
+
+    \end{enumerate}
+
+  \item
+
+    \begin{enumerate}
+
+      \item 
+
+        Given by the fact that field $\tilde{E}_i$ is directed in the $\bold{\hat{y}}$ direction, while being influenced by $x$ and $z$ components, we know that the wave is affected by \underline{perpendicular} polarization.
+
+      \item 
+
+        Given $3x+4z$, we may write:
+
+        $$\theta_i=\tan^{-1}\left( \frac{3}{4} \right)$$
+        $$\boxed{\theta_i=36.87^{\circ}}$$
+
+      \item 
+
+        This may be written in the time domain as:
+
+        $$\tilde{E}_i=\bold{\hat{y}}20e^{-j(3x+4z)}$$
+        $$E_i=20\cos(\omega t-(3x+4z))\bold{\hat{y}}$$
+
+        We can find the angular frequency using the formula:
+
+        $$\omega=ck$$
+
+        This gives us:
+
+        $$\omega=c\sqrt{3^2+4^2}$$
+        $$\omega=5c$$
+        $$\omega=1.5\cdot10^{9}\left[ \frac{\text{rad}}{\si{\second}} \right]$$
+
+        Thus, we get:
+
+        $$\boxed{E_i=20\cos((1.5\cdot10^9) t-(3x+4z))\bold{\hat{y}}}$$
+
+      \item 
+
+        The average power density is defined by the formula:
+
+        $$S_{avg}=\frac{|E|^2}{2\eta}$$
+
+        Since the incident wave is traveling in air, we may write:
+
+        $$\eta=\eta_o=376.819[\si{\ohm}]$$
+
+        Since, from the time domain, we know the magnitude of the wave, we may write:
+
+        $$S_{avg}=\frac{(20)^2}{2\cdot376.819}$$
+        $$\boxed{S_{avg}=.531\left[ \frac{\si{\watt}}{\si{\meter\squared}} \right]}$$
+
+      \item 
+
+        Since the wave is perpendicularly polarized, know that the magnitude of the reflected wave can be defined using:
+
+        $$|E^r|=\Gamma|E^i|$$
+
+        The reflection coefficient may be defined as:
+
+        $$\Gamma_{\perp}=\frac{\eta_2\cos(\theta_i)-\eta_1\cos(\theta_t)}{\eta_2\cos(\theta_i)+\eta_1\cos(\theta_t)}$$
+
+        Now, we need to find the transmitted angle:
+
+        $$\theta_t=\sin^{-1}\left( \frac{n_1\sin(\theta_i)}{n_2} \right)$$
+        $$\theta_t=\sin^{-1}\left( \frac{\sin(36.87)}{2} \right)$$
+        $$\theta_t=17.48^{\circ}$$
+
+        From here, we return to the reflection coefficient:
+
+        $$\Gamma_{\perp}=\frac{2\cos(36.87)-\cos(17.48)}{2\cos(36.87)+\cos(17.48)}$$
+        $$\Gamma_{\perp}=.253$$
+
+        This means that the magnitude becomes:
+
+        $$|E^r|=.253\cdot20=5.06$$
+
+        This gives us:
+
+        $$S_{avg}=\frac{|5.06|^2}{2\cdot376.819}$$
+        $$\boxed{S_{avg}=.03398\left[ \frac{\si{\watt}}{\si{\meter\squared}} \right]}$$
+
+    \end{enumerate}
+
+\end{enumerate}
+
+\end{document}
+
