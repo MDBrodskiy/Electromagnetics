@@ -22,9 +22,9 @@
 
       \item 
 
-        We know that, with an antenna centered at the origin, we may express the phasor as:
+        We know that, with a Hertzian dipole antenna centered at the origin, we may express the phasor as (as per eq. 9.44a):
 
-        $$\tilde{E}_\theta=j60I_o\left[ \frac{\cos\left( \frac{\pi}{2}\cos(\theta) \right)}{\sin(\theta)} \right]\left(\frac{e^{-jkR}}{R}\right)$$
+        $$\boxed{\tilde{E}_\theta=60jI_o\left[ \frac{\cos\left( \frac{\pi}{2}\cos(\theta) \right)}{\sin(\theta)} \right]\left( \frac{e^{-jkR}}{R} \right)}$$
 
       \item 
 
@@ -32,19 +32,81 @@
 
         $$R_{in}=R_{rad}+R_{loss}$$
 
-        A half-wave dipole means that $l=.5\lambda$. We can use the following formula for radiation resistance:
+        A half-wave dipole means that $R_{loss}<<R_{rad}$, which allows us to approximate:
 
-        $$R_{rad}=80\pi^2\left( \frac{l}{\lambda} \right)^2$$
+        $$R_{in}\approx R_{rad}$$
 
-        And we can use the following formula for resistive loss:
+        Using equation 9.33a, we may write:
 
-        $$R_{loss}=$$
+        $$R_{in}\approx\frac{2P_{rad}}{I_o^2}$$
+
+        Using our answer from (d), we write:
+
+        $$R_{in}\approx 2(36.57)$$
+        $$R_{in}=73.14[\si{\ohm}]$$
+
+        As stated in the textbook, for a half-wave dipole, the impedance is approximately $42[\si{\ohm}]$, which yields:
+
+        $$\boxed{Z_{in}=73.14+42j[\si{\ohm}]}$$
 
       \item 
 
-      \item 
+        To match the impedance with no reflection, we want the reflection coefficient to be 0. Thus, we may write the reflection coefficient as:
+
+        $$\Gamma=\frac{Z_L-Z_0}{Z_L+Z_0}$$
+
+        Since we want no reflection, $\Gamma\to0$, which gives us:
+
+        $$Z_L-Z_0=0$$
+
+        Thus, to match with no reflection, we want to create a system such that $Z_L=Z_0$, which would mean:
+
+        $$\boxed{Z_0=73.14+42j[\si{\ohm}]}$$
 
       \item 
+
+        We know the radiated power may be found by integrating the real part of:
+
+        $$dP_{rad}=R^2S(R,\theta,\phi)\,d\omega$$
+
+        Which is the Poynting vector. Thus, we write:
+
+        $$P_{rad}=\int\int \frac{R^2}{2\eta_o}\tilde{E}_\theta^2\,d\Omega$$
+
+        This gives us:
+
+        $$P_{rad}=\frac{15I_o^2}{\pi}\int\int\left[ \frac{\cos\left( \frac{\pi}{2}\cos(\theta) \right)}{\sin(\theta)} \right]^2\,d\Omega$$
+        $$P_{rad}=\frac{15I_o^2}{\pi}\int\int\left[ \frac{\cos\left( \frac{\pi}{2}\cos(\theta) \right)}{\sin(\theta)} \right]^2\sin(\theta)\,d\theta\,d\phi$$
+        $$P_{rad}=\frac{15I_o^2}{\pi}\int_0^{2\pi}\int_0^\pi\left[ \frac{\cos^2\left( \frac{\pi}{2}\cos(\theta) \right)}{\sin(\theta)} \right]\,d\theta\,d\phi$$
+        $$P_{rad}=\frac{15I_o^2}{\pi}\left(2\pi  \right)\left( 1.219 \right)$$
+
+        Substituting our value for $I_o$, we get:
+
+        $$\boxed{P_{rad}=36.57[\si{\watt}]}$$
+
+      \item 
+
+        We want the equation to shift such that $R\prime$ is the new radius, which depends on $R$, $\theta$, and $h$. We know the parametrization of spherical coordinates may be written as:
+
+        $$x=r\sin(\theta)\cos(\phi)$$
+        $$y=r\sin(\theta)\sin(\phi)$$
+        $$z=r\cos(\theta)$$
+
+        We can substitute $R$ from (a) such that $R\to\sqrt{x^z+y^2+z^2}$:
+
+        $$\tilde{E}_\theta=60jI_o\left[ \frac{\cos\left( \frac{\pi}{2}\cos(\theta) \right)}{\sin(\theta)} \right]\left( \frac{e^{-jk\sqrt{x^2+y^2+z^2}}}{\sqrt{x^2+y^2+z^2}} \right)$$
+
+        We know that the shift in $x$ will lead to $x\to x-h$:
+
+        $$\tilde{E}_\theta=60jI_o\left[ \frac{\cos\left( \frac{\pi}{2}\cos(\theta) \right)}{\sin(\theta)} \right]\left( \frac{e^{-jk\sqrt{(x-h)^2+y^2+z^2}}}{\sqrt{(x-h)^2+y^2+z^2}} \right)$$
+
+        Combining the above with the parametrization, we get:
+
+        $$\tilde{E}_\theta=60jI_o\left[ \frac{\cos\left( \frac{\pi}{2}\cos(\theta) \right)}{\sin(\theta)} \right]\left( \frac{e^{-jk\sqrt{(R\sin(\theta)\cos(\phi)-h)^2+(R\sin(\theta)\sin(\phi))^2+(R\cos(\theta))^2}}}{\sqrt{(R\sin(\theta)\cos(\phi)-h)^2+(R\sin(\theta)\sin(\phi))^2+(R\cos(\theta))^2}} \right)$$
+
+        We can simplify this a bit to get:
+
+        $$\boxed{\tilde{E}_\theta=60jI_o\left[ \frac{\cos\left( \frac{\pi}{2}\cos(\theta) \right)}{\sin(\theta)} \right]\left( \frac{e^{-jk\sqrt{R^2-hR\sin(\theta)\cos(\phi)+h^2}}}{\sqrt{R^2-hR\sin(\theta)\cos(\phi)+h^2}} \right)}$$
 
       \item 
 
@@ -166,8 +228,8 @@
 
         We apply this information to our formula:
 
-        $$\Gamma_{\parallel}=\frac{\sqrt{4}\cos(22.52)-(1)\cos(50)}{\sqrt{4}\cos(22.52)+(1)\cos(50)}$$
-        $$\boxed{\Gamma_{\parallel}=.4838}$$
+        $$\Gamma_{\parallel}=\frac{\frac{1}{\sqrt{4}}\cos(22.52)-(1)\cos(50)}{\frac{1}{\sqrt{4}}\cos(22.52)+(1)\cos(50)}$$
+        $$\boxed{\Gamma_{\parallel}=-.1638}$$
 
 
       \item 
@@ -178,8 +240,8 @@
 
         This gives us:
 
-        $$\tau_{\parallel}=(1+.4838)\frac{\cos(50)}{\cos(22.52)}$$
-        $$\boxed{\tau_{\parallel}=1.0325}$$
+        $$\tau_{\parallel}=(1-.1638)\frac{\cos(50)}{\cos(22.52)}$$
+        $$\boxed{\tau_{\parallel}=.5819}$$
 
       \item 
 
@@ -189,8 +251,8 @@
 
         This yields:
 
-        $$\Gamma_{\perp}=\frac{2\cos(50)-(1)\cos(22.52)}{2\cos(50)+(1)\cos(22.52)}$$
-        $$\boxed{\Gamma_{\perp}=.1638}$$
+        $$\Gamma_{\perp}=\frac{\frac{1}{2}\cos(50)-(1)\cos(22.52)}{\frac{1}{2}\cos(50)+(1)\cos(22.52)}$$
+        $$\boxed{\Gamma_{\perp}=-.4838}$$
 
       \item 
 
@@ -200,8 +262,8 @@
 
         This gives us:
 
-        $$\tau_{\perp}=(1+.1638)$$
-        $$\boxed{\tau_{\perp}=1.1638}$$
+        $$\tau_{\perp}=(1-.4838)$$
+        $$\boxed{\tau_{\perp}=.5162}$$
 
       \item 
 
@@ -217,7 +279,7 @@
 
       \item 
 
-        We know that, for a nonmagnetic material (as the one described in the problem), the Brewster angle exists only for the parallel polarization (thus the use of $\theta_{B\parallel}$). A beam entering a medium at a this angle of incidence would fully transmit its perpendicular component (only the perpendicular component is reflected). This can be explained in the diagram below:
+        We know that, for a nonmagnetic material (as the one described in the problem), the Brewster angle exists only for the parallel polarization (thus the use of $\theta_{B\parallel}$). A beam entering a medium at a this angle of incidence would fully transmit its parallel component (only the perpendicular component is reflected). This can be explained in the diagram below:
 
         \begin{figure}[h!]
           \centering
@@ -226,7 +288,7 @@
           \label{fig:2}
         \end{figure}
 
-        Given a coordinate set $(\perp,\parallel)$ representing each components strength, we can see that for the incident wave and transmitted wave, the perpendicular components are equal, since it is fully transmitted. On the other hand, there is some parallel reflection, which can be represented by the transmission and reflection coefficients.
+        Given a coordinate set $(\perp,\parallel)$ representing each components strength, we can see that for the incident wave and transmitted wave, the perpendicular component experiences reflection. On the other hand, there is no parallel reflection.
 
       \item 
 
@@ -240,25 +302,25 @@
         From here, we can find the perpendicular reflection coefficient:
 
         $$\Gamma_{\perp}=\frac{\eta_2\cos(\theta_i)-\eta_1\cos(\theta_t)}{\eta_2\cos(\theta_i)+\eta_1\cos(\theta_t)}$$
-        $$\Gamma_{\perp}=\frac{2\cos(63.435)-\cos(26.565)}{2\cos(63.435)+\cos(26.565)}$$
-        $$\boxed{\Gamma_{\perp}=0}$$
+        $$\Gamma_{\perp}=\frac{.5\cos(63.435)-\cos(26.565)}{.5\cos(63.435)+\cos(26.565)}$$
+        $$\boxed{\Gamma_{\perp}=-.6}$$
 
-        Note that the above result makes sense, as we expect the perpendicular component to be fully transmitted. The parallel reflection becomes:
+        Note that the above result makes sense, as we expect the perpendicular component to be reflected. The parallel reflection becomes:
 
         $$\Gamma_{\parallel}=\frac{\eta_2\cos(\theta_t)-\eta_1\cos(\theta_i)}{\eta_2\cos(\theta_t)+\eta_1\cos(\theta_i)}$$
-        $$\Gamma_{\parallel}=\frac{2\cos(26.565)-\cos(63.435)}{2\cos(26.565)+\cos(63.435)}$$
-        $$\boxed{\Gamma_{\parallel}=.6}$$
+        $$\Gamma_{\parallel}=\frac{.5\cos(26.565)-\cos(63.435)}{.5\cos(26.565)+\cos(63.435)}$$
+        $$\boxed{\Gamma_{\parallel}=0}$$
 
         The perpendicular transmission may be expressed as:
 
         $$\tau_{\perp}=(1+\Gamma_{\perp})$$
-        $$\boxed{\tau_{\perp}=1}$$
+        $$\boxed{\tau_{\perp}=.4}$$
 
-        Again, this makes sense as the perpendicular component will be fully transmitted. The parallel transmission is:
+        Again, this makes sense as the perpendicular component will be reflected. The parallel transmission is:
 
         $$\tau_{\parallel}=(1+\Gamma_{\parallel})\frac{\cos(\theta_i)}{\cos(\theta_t)}$$
-        $$\tau_{\parallel}=(1+.6)\frac{\cos(63.435)}{\cos(26.565)}$$
-        $$\boxed{\tau_{\parallel}=.8}$$
+        $$\tau_{\parallel}=(1+0)\frac{\cos(63.435)}{\cos(26.565)}$$
+        $$\boxed{\tau_{\parallel}=.5}$$
 
         \newpage
 
@@ -273,7 +335,7 @@
           \label{fig:3}
         \end{figure}
 
-        A beam would be focused through a perpendicular polarizer  and then a material with an adjustable angle (the ability to rotate to different angles). This beam would then pass through the perpendicular polarizer, which would allow only the perpendicular component to pass through. The perpendicular-only beam would then pass through the adjustable material, and, subsequently, to the power reader. The power value is recorded with respect to the angle of the adjustable material, and then the angle of the material is modified (preferably in uniform steps). By definition, the transmitted perpendicular component of the beam would be maximized at the Brewster angle. Thus, as the power readings are taken, the Brewster angle is the angle that corresponds to the maximum power reading. 
+        A beam would be focused through a parallel polarizer and then a material with an adjustable angle (the ability to rotate to different angles). As this beam passes through the parallel polarizer,  only the parallel component will be passed through. The parallel-only beam would then pass through the adjustable material, and, subsequently, to the power reader. The power value is recorded with respect to the angle of the adjustable material, and then the angle of the material is modified (preferably in uniform steps). By definition, the transmitted parallel component of the beam would be maximized at the Brewster angle. Thus, as the power readings are taken, the Brewster angle is the angle that corresponds to the maximum power reading. 
 
     \end{enumerate}
 
