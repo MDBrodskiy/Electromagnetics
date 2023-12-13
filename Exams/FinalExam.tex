@@ -49,6 +49,10 @@
 
         $$\boxed{Z_{in}=73.14+42j[\si{\ohm}]}$$
 
+        Note: the complex term can go to zero with a very slight change in dipole length, so we may simply write:
+
+        $$\boxed{Z_{in}=73.14[\si{\ohm}]}$$
+
       \item 
 
         To match the impedance with no reflection, we want the reflection coefficient to be 0. Thus, we may write the reflection coefficient as:
@@ -62,6 +66,11 @@
         Thus, to match with no reflection, we want to create a system such that $Z_L=Z_0$, which would mean:
 
         $$\boxed{Z_0=73.14+42j[\si{\ohm}]}$$
+
+        Or, if we drop the complex term:
+
+        $$\boxed{Z_0=73.14[\si{\ohm}]}$$
+
 
       \item 
 
@@ -106,15 +115,93 @@
 
         We can simplify this a bit to get:
 
-        $$\boxed{\tilde{E}_\theta=60jI_o\left[ \frac{\cos\left( \frac{\pi}{2}\cos(\theta) \right)}{\sin(\theta)} \right]\left( \frac{e^{-jk\sqrt{R^2-hR\sin(\theta)\cos(\phi)+h^2}}}{\sqrt{R^2-hR\sin(\theta)\cos(\phi)+h^2}} \right)}$$
+        $$\boxed{\tilde{E}_\theta=60jI_o\left[ \frac{\cos\left( \frac{\pi}{2}\cos(\theta) \right)}{\sin(\theta)} \right]\left( \frac{e^{-jk\sqrt{R^2-2hR\sin(\theta)\cos(\phi)+h^2}}}{\sqrt{R^2-2hR\sin(\theta)\cos(\phi)+h^2}} \right)}$$
 
       \item 
 
-      \item 
+        The PEC will produce some reflection such that we can write:
+
+        $$\tilde{E}_\theta^i+\tilde{E}_\theta^r=\tilde{E}_\theta^t$$
+
+        The reflected term, $\tilde{E}_\theta^r$, can be defined similar to how we defined the $h$-shifted antenna, except that we add the $h$ (picture this as a two-antenna array, with both $h$ away):
+
+        $$\tilde{E}_\theta^r=60jI_o\left[ \frac{\cos\left( \frac{\pi}{2}\cos(\theta) \right)}{\sin(\theta)} \right]\left( \frac{e^{-jk\sqrt{R^2+2hR\sin(\theta)\cos(\phi)+h^2}}}{\sqrt{R^2+2hR\sin(\theta)\cos(\phi)+h^2}} \right)$$
+
+        For ease of reading, let us assign two variables such that:
+
+        $$a=\sqrt{R^2-2hR\sin(\theta)\cos(\phi)+h^2}$$
+
+        and 
+
+        $$b=\sqrt{R^2+2hR\sin(\theta)\cos(\phi)+h^2}$$
+
+        From here, the total electric field may be computed as:
+
+        $$\boxed{\tilde{E}_\theta^t=60jI_o\left[ \frac{\cos\left( \frac{\pi}{2}\cos(\theta) \right)}{\sin(\theta)} \right]\left( \frac{e^{-jka}}{a}-\frac{e^{-jkb}}{b} \right)}$$
 
       \item 
 
+        The plots generated look as follows:
+
+        \begin{figure}[H] \centering
+          \includegraphics[width=.7\textwidth]{Figures/4lambda.png}
+          \caption{Figure for $h=4\lambda$}
+          \label{fig:1}
+        \end{figure}
+
+        \begin{figure}[H]
+          \centering
+          \includegraphics[width=.7\textwidth]{Figures/lambda.png}
+          \caption{Figure for $h=\lambda$}
+          \label{fig:2}
+        \end{figure}
+
+        \begin{figure}[H]
+          \centering
+          \includegraphics[width=.7\textwidth]{Figures/3lambda-4.png}
+          \caption{Figure for $h=.75\lambda$}
+          \label{fig:3}
+        \end{figure}
+
+        \begin{figure}[H]
+          \centering
+          \includegraphics[width=.7\textwidth]{Figures/lambda-2.png}
+          \caption{Figure for $h=.5\lambda$}
+          \label{fig:4}
+        \end{figure}
+
+        \begin{figure}[H]
+          \centering
+          \includegraphics[width=.7\textwidth]{Figures/lambda-4.png}
+          \caption{Figure for $h=.25\lambda$}
+          \label{fig:5}
+        \end{figure}
+
       \item 
+
+        The PEC will produce some reflection such that we can write:
+
+        $$\tilde{E}_\theta^i+\tilde{E}_\theta^r=\tilde{E}_\theta^t$$
+
+        This time, we can imagine a reflected antenna shifted $-4\lambda$ and $-h$. Thus, we can get:
+
+        $$c\to\sqrt{(R\sin(\theta)\cos(\phi)-h)^2+(R\sin(\theta)\sin(\phi))^2+(R\cos(\theta)-4\lambda)^2}$$
+        $$c\to\sqrt{R^2-2hR\sin(\theta)\cos(\phi)-8\lambda R\cos(\theta)+h^2+16\lambda^2}$$
+
+        $$\tilde{E}_\theta^r=60jI_o\left[ \frac{\cos\left( \frac{\pi}{2}\cos(\theta) \right)}{\sin(\theta)} \right]\left( \frac{e^{-jkc}}{c} \right)$$
+
+        The total electric fields thus becomes:
+
+        $$\tilde{E}_\theta^t=60jI_o\left[ \frac{\cos\left( \frac{\pi}{2}\cos(\theta) \right)}{\sin(\theta)} \right]\left( \frac{e^{-jka}}{a}+\frac{e^{-jkc}}{c} \right)$$
+
+      \item See Plots Below
+
+        \begin{figure}[H]
+          \centering
+          \includegraphics[width=.7\textwidth]{Figures/RI.png}
+          \caption{Radiation Intensity Plots}
+          \label{fig:6}
+        \end{figure}
 
     \end{enumerate}
 
@@ -122,10 +209,9 @@
 
         We know that, for an array consisting of two antennas, we may write the array factor as:
 
-        $$AF_2=2\cos\left[ \frac{1}{2}\left( \beta d\cos(\theta+\phi) \right) \right]$$
+        $$AF_2=4\cos^2\left[ \frac{\pi}{\lambda}d\cos(\theta)+\frac{\phi}{2} \right]$$
 
         with $\beta$ as the wave number.
-        
 
     \begin{enumerate}
 
@@ -133,7 +219,7 @@
 
         Given that there is no phase difference, we may write (using the above equation):
 
-        $$AF_2=2\cos\left[ \frac{\pi d}{\lambda}\cos(\theta) \right]$$
+        $$AF_2=4\cos^2\left[ \frac{\pi d}{\lambda}\cos(\theta) \right]$$
 
         We are asked to find an angle $\theta$ such that there is a maximum at:
 
@@ -141,56 +227,56 @@
 
         Plugging this into our equation, we may write:
 
-        $$AF_2=2\cos\left(\frac{\pi d\sqrt{3}}{2\lambda}\right)$$
+        $$AF_2=4\cos^2\left(\frac{\pi d\sqrt{3}}{2\lambda}\right)$$
 
-        We know that the $\cos$ term will be at a maximum when the inside is an integer ($n$) multiple of $2\pi$. Thus, we get:
+        We know that the $\cos$ term will be at a maximum when the inside is an integer ($n$) multiple of $\pi$. Thus, we get:
 
-        $$\frac{\pi d\sqrt{3}}{2\lambda}=2\pi n$$
+        $$\frac{\pi d\sqrt{3}}{2\lambda}=\pi n$$
 
         As such, we can find the $d/\lambda$ ratio for maximum at $\theta=30$ as:
 
-        $$\boxed{\frac{d}{\lambda}=\frac{4n}{\sqrt{3}}}$$
+        $$\boxed{\frac{d}{\lambda}=\frac{2n}{\sqrt{3}}}$$
 
       \item 
 
         Here, we have a similar set up as that of part (a), except that we want the array factor to be null (0). Thus, we can use the following set up:
 
-        $$\frac{\pi d\sqrt{3}}{2\lambda}=\frac{(2n-1)\pi}{2}$$
+        $$\frac{\pi d\sqrt{3}}{\lambda}=(2n-1)\pi$$
         $$\boxed{\frac{d}{\lambda}=\frac{2n-1}{\sqrt{3}}}$$
 
       \item 
 
         We may adjust our approach to part (a), and write:
 
-        $$AF_2=2\cos\left[ \frac{1}{2}\left( \beta d\cos(\theta+\phi) \right) \right]$$
-        $$AF_2=2\cos\left[ -\frac{1}{2}\left( \beta d\frac{\sqrt{3}}{2} \right) \right]$$
-        $$AF_2=2\cos\left[ -\frac{\pi d\sqrt{3}}{2\lambda} \right]$$
+        $$AF_2=4\cos^2\left[ \frac{\pi}{\lambda} d\cos(\theta)+\frac{\phi}{2} \right]$$
+        $$AF_2=4\cos^2\left[  d\frac{\pi\sqrt{3}}{2\lambda}+\frac{\pi}{2} \right]$$
+        $$AF_2=4\cos^2\left[ \frac{\pi d\sqrt{3}}{2\lambda}+\frac{\pi}{2} \right]$$
 
         Again, to maximize the $\cos$ term, we write:
 
-        $$-\frac{\pi d\sqrt{3}}{2\lambda}=2n\pi$$
+        $$\frac{\pi d\sqrt{3}}{2\lambda}+\frac{\pi}{2}=n\pi$$
 
         We then rearrange:
 
-        $$\frac{\pi d\sqrt{3}}{2\lambda}=-2n\pi$$
+        $$\frac{\pi d\sqrt{3}}{\lambda}+1=2n$$
 
         Finally, we get:
 
-        $$\boxed{\frac{d}{\lambda}=-\frac{4n}{\sqrt{3}}}$$
+        $$\boxed{\frac{d}{\lambda}=\frac{2n-1}{\sqrt{3}}}$$
 
       \item 
 
         Once again, to make the array null, we find:
 
-        $$-\frac{\pi d\sqrt{3}}{2\lambda}=\frac{(2n-1)\pi}{2}$$
+        $$\frac{\pi d\sqrt{3}}{\lambda}+\pi=(2n+1)\pi$$
 
         We rearrange:
 
-        $$\frac{\pi d\sqrt{3}}{2\lambda}=-\left( 2n-1\right)\frac{\pi}{2}$$
+        $$\frac{d\sqrt{3}}{\lambda}+1=\left( 2n+1\right)$$
 
         This gives us:
 
-        $$\boxed{\frac{d}{\lambda}=-\frac{2n-1}{\sqrt{3}}}$$
+        $$\boxed{\frac{d}{\lambda}=\frac{2n}{\sqrt{3}}}$$
 
     \newpage
 
@@ -198,14 +284,14 @@
 
         We plot the array factors at the maximization points, with the assumption $n=1$. Thus, we obtain:
 
-        \begin{figure}[h!]
+        \begin{figure}[H]
           \centering
           \includegraphics[width=.9\textwidth]{Figures/AFPlots.png}
           \caption{Plots of Array Factors}
-          \label{fig:1}
+          \label{fig:6}
         \end{figure}
 
-        Note we may see the plots in red as those with a $\pi$ phase difference, and those in blue as no phase difference. We can see that the corresponding maximization and null plots appear exactly the same. This makes sense, as a $180^{\circ}$ phase shift would have no effect over the entire $360^{\circ}$ of operation.
+        As expected, we can see plots 1 and 3 maximized at $30^{\circ}$ and plots 2 and 4 at 0.
 
     \end{enumerate}
 
@@ -281,11 +367,11 @@
 
         We know that, for a nonmagnetic material (as the one described in the problem), the Brewster angle exists only for the parallel polarization (thus the use of $\theta_{B\parallel}$). A beam entering a medium at a this angle of incidence would fully transmit its parallel component (only the perpendicular component is reflected). This can be explained in the diagram below:
 
-        \begin{figure}[h!]
+        \begin{figure}[H]
           \centering
           \include{Figures/Brewster.tex}
           \caption{Brewster Angle Scenario}
-          \label{fig:2}
+          \label{fig:7}
         \end{figure}
 
         Given a coordinate set $(\perp,\parallel)$ representing each components strength, we can see that for the incident wave and transmitted wave, the perpendicular component experiences reflection. On the other hand, there is no parallel reflection.
@@ -326,13 +412,13 @@
 
       \item 
 
-        We can measure the Brewster angle using a similar lab set up to the one picture in \ref{fig:3} below:
+        We can measure the Brewster angle using a similar lab set up to the one picture in \ref{fig:8} below:
 
-        \begin{figure}[h!]
+        \begin{figure}[H]
           \centering
           \include{Figures/Lab.tex}
           \caption{Simplified Lab Set-up}
-          \label{fig:3}
+          \label{fig:8}
         \end{figure}
 
         A beam would be focused through a parallel polarizer and then a material with an adjustable angle (the ability to rotate to different angles). As this beam passes through the parallel polarizer,  only the parallel component will be passed through. The parallel-only beam would then pass through the adjustable material, and, subsequently, to the power reader. The power value is recorded with respect to the angle of the adjustable material, and then the angle of the material is modified (preferably in uniform steps). By definition, the transmitted parallel component of the beam would be maximized at the Brewster angle. Thus, as the power readings are taken, the Brewster angle is the angle that corresponds to the maximum power reading. 
@@ -408,17 +494,17 @@
 
         From here, we return to the reflection coefficient:
 
-        $$\Gamma_{\perp}=\frac{2\cos(36.87)-\cos(17.48)}{2\cos(36.87)+\cos(17.48)}$$
-        $$\Gamma_{\perp}=.253$$
+        $$\Gamma_{\perp}=\frac{.5\cos(36.87)-\cos(17.48)}{.5\cos(36.87)+\cos(17.48)}$$
+        $$\Gamma_{\perp}=-.409$$
 
         This means that the magnitude becomes:
 
-        $$|E^r|=.253\cdot20=5.06$$
+        $$|E^r|=|-.409\cdot20|=8.18$$
 
         This gives us:
 
-        $$S_{avg}=\frac{|5.06|^2}{2\cdot376.819}$$
-        $$\boxed{S_{avg}=.03398\left[ \frac{\si{\watt}}{\si{\meter\squared}} \right]}$$
+        $$S_{avg}=\frac{|8.18|^2}{2\cdot376.819}$$
+        $$\boxed{S_{avg}=.0888\left[ \frac{\si{\watt}}{\si{\meter\squared}} \right]}$$
 
     \end{enumerate}
 
